@@ -1,0 +1,336 @@
+body {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+.ea3-breadcrumb {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  background-color: #e9ecef;
+  border-radius: 0.25rem;
+}
+.breadcrumb {
+  margin: 0;
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
+  background: #f4f5f6;
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+  padding: 0 0.5em;
+  color: #6c757d;
+}
+
+.breadcrumb-item a {
+  color: #0070d2;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+  color: #6c757d;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+}
+.ea3-request-heading {
+  padding: 12px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ebebeb;
+}
+.ea3-request-heading .ea3-header-left {
+  display: flex;
+  gap: 12px;
+}
+.ea3-request-heading .ea3-header-left .ea3-header-left-request {
+  display: flex;
+  gap: 12px;
+}
+.ea3-request-heading .ea3-header-left .ea3-sub-tittle {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1b1c1d;
+}
+.ea3-request-heading .ea3-header-left p {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #4a4b4d;
+}
+.ea3-request-heading .ea3-header-left .ea3-olivia {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1b1c1d;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.ea3-request-heading .ea3-header-left .ea3-olivia-link {
+  color: #0070d2;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+}
+.ea3-request-heading .ea3-header-left .ea3-owner-user-box {
+  padding: 0 12px;
+  border-left: 1px solid #d6d6d6;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.ea3-request-heading .ea3-header-left .ea3-owner-user-box .ea3-badge {
+  background: #ffe6bd;
+  padding: 3px 6px;
+  border-radius: 4px;
+  color: #1b1c1d;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+}
+.ea3-request-heading .ea3-top-heading {
+  margin: 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ea3-request-heading .ea3-top-heading h2 {
+  color: #606162;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -0.32px;
+  margin: 0;
+}
+.ea3-request-heading .ea3-top-heading h2 span {
+  color: #1b1c1d;
+}
+.ea3-top-heading .ea3-badge {
+  background: #ffe6bd;
+  padding: 3px 6px;
+  border-radius: 4px;
+  color: #1b1c1d;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+}
+.ea3-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ea3-outlineBtn {
+  border-radius: 16px;
+  padding: 6px 24px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0070d2;
+  background-color: #fff;
+  border: 1px solid #0070d2;
+}
+.ea3-outlineBtn:hover {
+  color: #fff;
+  background-color: #0070d2;
+  transition: 0.5s ease-in-out;
+}
+.ea3-primaryBtn {
+  border-radius: 16px;
+  padding: 6px 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #0070d2;
+  border: 1px solid #0070d2;
+}
+.ea3-main {
+  padding: 0 40px;
+  display: flex;
+  gap: 24px;
+}
+.ea3-left-content {
+  flex: 1;
+}
+.ea3-right-content {
+  width: 100%;
+  max-width: 376px;
+  margin-top: 12px;
+}
+
+/* ---------------------------------------------------------------------------------------- */
+.ea3-error-component {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  border-left: 2px solid #f4473e;
+  background: #fff2f1;
+}
+.ea3-error-component label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  display: block;
+  margin-bottom: 8px;
+}
+.ea3-error-component .alert-massage-view {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  display: block;
+  color: #0070d2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+.ea3-proposal-contract {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+.ea3-proposal-contract-header h4 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0;
+  margin-bottom: 12px;
+}
+.ea3-proposal-contract-header p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #1b1c1d;
+  margin: 0;
+}
+
+.ea3-secondary-outlineBtn {
+  background: transparent;
+  border: 1px solid #8e8e8e;
+  color: #8e8e8e;
+  border-radius: 16px;
+  padding: 6px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.ea3-upload-card {
+  padding: 48px 0;
+  border: 1px dashed #d6d6d6;
+  background: #f4f5f6;
+  display: flex;
+  border-radius: 4px;
+  flex-direction: column;
+  align-items: center;
+}
+.ea3-upload-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 303px;
+}
+.ea3-upload-text label {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 16px 0 12px;
+  text-align: center;
+}
+.ea3-upload-where-from {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+.ea3-upload-where-from .ea3-browse-divider {
+  flex-grow: 1;
+  height: 1px;
+  background: #d6d6d6;
+}
+.ea3-upload-where-from span {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  color: #606162;
+  min-width: 117px;
+}
+.ea3-label-group {
+  margin-top: 12px;
+}
+.ea3-upload-text label.browsebtn {
+  padding: 6px 24px;
+  border-radius: 16px;
+  background: #0070d2;
+  color: #ffffff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 0;
+  margin-right: 8px;
+}
+.ea3-upload-text .outline-browsebtn {
+  border: 1px solid #0070d2;
+  padding: 6px 24px;
+  border-radius: 16px;
+  color: #0070d2;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.ea3-upload-text a {
+  text-decoration: none;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  color: #0070d2;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+}
+
+/* ----------------------sidebar----------------------- */
+
+.ea3-proposal-setup {
+  display: flex;
+  justify-content: space-between;
+}

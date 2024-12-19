@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EA3 Licensing and Finance</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="../cisco-fonts.css" />
+    <link rel="stylesheet" href="../stepper.css" />
+    <link rel="stylesheet" href="../modal.css" />
+  </head>
+
+  <body>
+    <nav aria-label="ea3-breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Buying Program Dashboard</a>
+        </li>
+        <li class="breadcrumb-item"><a href="#">EA 3.0</a></li>
+        <li class="breadcrumb-item active" aria-current="page">
+          Buying Program Attributes
+        </li>
+      </ol>
+    </nav>
+    <div class="ea3-threshold-heading">
+      <div class="ea3-header-left ea3-top-heading">
+        <div class="ea3-header-left-threshold ea3-top-heading">
+          <h2>Buying Program Attributes</h2>
+        </div>
+      </div>
+      <div class="ea3-btn-group">
+        <a
+          href="../ea3-licensing&finance/ea3-licensing&finance.html"
+          class="ea3-outlineBtn"
+          >Back</a
+        >
+        <button class="ea3-validate-proposal">
+          <span class="ea3-btn-icon"><img src="./img/validate-true.svg" /></span
+          >Validate Proposal Construct
+        </button>
+        <a href="" class="ea3-primaryBtn">Publish to Production</a>
+      </div>
+    </div>
+    <div class="ea3-content-wrapper">
+      <div class="ea3-primeary-alert">
+        <img src="./img/explosion.svg" />Amet minim mollit ullamco non deserunt
+        est sit aliqua dolor do amet sint duis enim.
+      </div>
+      <div class="ea3-buying-programing-attribute-content">
+        <div class="ea3-buyer-program-stepper">
+          <div class="buyer-program-heading">
+            <div class="heading">
+              <h5>EA3.0</h5>
+              <button class="ea3-transparentBtn" onclick="openRequestModal()">
+                <img src="./img/edit-Icon.svg" alt="" />
+              </button>
+            </div>
+            <a href="#" class="buyer-program-stepper-linking"
+              ><img src="./img/downloadIcon.svg" alt="" /> Download Existing
+              Attributes</a
+            >
+          </div>
+          <div class="buyer-program-title">
+            <span>Delisted Ext. List Threshold (10%)</span>
+          </div>
+          <span class="ea3-batch ea3-inprogress">Prepaid Term</span>
+          <div class="ea3-buyer-program-progreessBar">
+            <ul style="margin-bottom: 20px">
+              <li class="ea3-progress-stepper">
+                <span class="ea3-progress-line"></span>
+                <div class="progressBar">
+                  <img src="./img/calendar.svg" alt="" />
+                  <p>
+                    Default RSD<span class="progress-count"> (90 Days)</span>
+                  </p>
+                </div>
+                <span></span>
+              </li>
+              <li class="ea3-progress-stepper-counts-list">
+                <div class="ea3-progress-stepper-counts">
+                  <p>Min RSD</p>
+                  <span>00</span>
+                </div>
+                <div class="ea3-progress-stepper-counts">
+                  <p>Min RSD</p>
+                  <span>270</span>
+                </div>
+              </li>
+            </ul>
+            <ul>
+              <li class="ea3-progress-stepper">
+                <span class="ea3-progress-line"></span>
+                <div class="progressBar">
+                  <img src="./img/clock.svg" alt="" />
+                  <p>
+                    Default RSD<span class="progress-count"> (36 Months)</span>
+                  </p>
+                </div>
+                <span></span>
+              </li>
+              <li class="ea3-progress-stepper-counts-list">
+                <div class="ea3-progress-stepper-counts">
+                  <p>Min Duration</p>
+                  <span>12</span>
+                </div>
+                <div class="ea3-progress-stepper-counts">
+                  <p>Min Duration</p>
+                  <span>270</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="ea3-empty-state">
+          <img src="./img/Illustration.svg" />
+          <h4>Setup new Attributes</h4>
+          <p>To add a new Buying Program Attributes, click on Add More.</p>
+          <button class="ea3-outlineBtn">Add More</button>
+        </div>
+      </div>
+    </div>
+    <div id="buyingEditModal" class="ea3-modal requestModal">
+      <div class="ea3-modal-content requestModalContent editModal">
+        <div class="ea3-modal-header requestHeader">
+          Buying Program Attributes
+          <p class="ea3-modal-header-title">
+            Edit and setup attributes values for existing Buying Program.
+          </p>
+          <button
+            class="ea3-closebtn closeIcon"
+            onclick="closeRequestModal()"
+          ></button>
+        </div>
+        <div class="ea3-modal-body requestBody">
+          <div class="buyingEditModalHeading">
+            <div class="ea3-header-left ea3-top-heading">
+              <h2>EA3.0</h2>
+            </div>
+            <div class="ea3-btn-group">
+              <a href="" class="ea3-secondaryDisableBtn"
+                >Validate Proposal Construct</a
+              >
+              <a href="" class="ea3-primaryBtn">Publish to Production</a>
+            </div>
+          </div>
+          <div class="ea3-editModalForm">
+            <div class="ea3-inputField">
+              <label for="" class="ea3-inputfield-label">RSD</label>
+              <input
+                type="text"
+                class="ea3-inputfield-input"
+                placeholder="90"
+              />
+            </div>
+            <div class="ea3-inputField">
+              <label for="" class="ea3-inputfield-label">MinRSD</label>
+              <input
+                type="text"
+                class="ea3-inputfield-input"
+                placeholder="00"
+              />
+            </div>
+            <div class="ea3-inputField">
+              <label for="" class="ea3-inputfield-label">MinRSD</label>
+              <input
+                type="text"
+                class="ea3-inputfield-input"
+                placeholder="270"
+              />
+            </div>
+            <div class="ea3-inputField">
+              <label for="" class="ea3-inputfield-label">Duration</label>
+              <select id="select1" class="ea3-inputfield-input">
+                <option value="option1">10</option>
+                <option value="option2">20</option>
+                <option value="option3">36</option>
+              </select>
+            </div>
+            <div class="ea3-inputField">
+              <label for="" class="ea3-inputfield-label">Min Duration</label>
+              <select id="select1" class="ea3-inputfield-input">
+                <option value="option1">10</option>
+                <option value="option2">20</option>
+                <option value="option3">36</option>
+              </select>
+            </div>
+            <div class="ea3-inputField">
+              <label for="" class="ea3-inputfield-label">Min Duration</label>
+              <select id="select1" class="ea3-inputfield-input">
+                <option value="option1">10</option>
+                <option value="option2">20</option>
+                <option value="option3">36</option>
+              </select>
+            </div>
+            <div class="ea3-inputField">
+              <label for="" class="ea3-inputfield-label"
+                >Delisted Ext. List Threshold</label
+              >
+              <input
+                type="number"
+                class="ea3-inputfield-input ea3-numberField"
+                placeholder="10%"
+              />
+            </div>
+            <div class="ea3-inputField">
+              <label for="select1" class="ea3-inputfield-label">RSD</label>
+              <select id="select1" class="ea3-inputfield-input">
+                <option value="option1">10</option>
+                <option value="option2">20</option>
+                <option value="option3">36</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="ea3-modal-footer requestFooter">
+          <button class="ea3-transparentBtn resetBtn">
+            <img src="./img/resetIcon.svg" alt="" />Reset
+          </button>
+          <button class="ow-outlineBtn" onclick="closeRequestModal()">
+            Cancel
+          </button>
+          <button class="ow-primaryBtn" onclick="redirectToEnrollment()">
+            Done
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./js/script.js"></script>
+</html>

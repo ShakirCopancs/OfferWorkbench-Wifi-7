@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.ea3-enrollment-container {
+  padding: 0 40px;
+  background-color: #ffffff;
+}
+.ea3-enrollment-container .ea3-header {
+  display: flex;
+  padding: 12px 0;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ebebeb;
+}
+.ea3-enrollment-container .ea3-header .ea3-header-left {
+  display: flex;
+  gap: 12px;
+}
+.ea3-enrollment-container .ea3-header .ea3-header-left .ea3-sub-tittle {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1b1c1d;
+}
+.ea3-enrollment-container .ea3-header .ea3-header-left p {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #4a4b4d;
+}
+.ea3-enrollment-container .ea3-header .ea3-header-left .ea3-olivia {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1b1c1d;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.ea3-enrollment-container .ea3-header .ea3-header-left .ea3-olivia-link {
+  color: #0070d2;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+}
+.ea3-enrollment-container .ea3-header .ea3-header-left .ea3-owner-user-box {
+  padding: 0 12px;
+  border-left: 1px solid #d6d6d6;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 38px;
+  margin: auto 0;
+}
+.ea3-enrollment-container .ea3-header h2 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+}
+.ea3-enrollment-container .ea3-header .ea3-button-group button.ea3-discard {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 6px 24px;
+  border-radius: 16px;
+  border: 1px solid #0070d2;
+  background: transparent;
+  color: #0070d2;
+  cursor: pointer;
+}
+.ea3-enrollment-container .ea3-header .ea3-button-group {
+  display: inline-flex;
+  gap: 8px;
+}
+.ea3-enrollment-container .ea3-header .ea3-button-group a.ea3-request {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 6px 24px;
+  border-radius: 16px;
+  color: #8e8e8e;
+  text-decoration: none;
+  background-color: #ebebeb;
+  border: 1px solid #ebebeb;
+}
+.ea3-enrollment-container .ea3-enrollment-info {
+  text-align: center;
+  padding: 32px 0;
+}
+.ea3-enrollment-container .ea3-enrollment-info img.illustration {
+  margin-bottom: 40px;
+}
+.ea3-enrollment-container .ea3-enrollment-info h3 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+  color: #1b1c1d;
+  margin-bottom: 8px;
+}
+.ea3-enrollment-container .ea3-enrollment-info p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1b1c1d;
+  margin-bottom: 16px;
+}
+.ea3-enrollment-container .ea3-enrollment-info button.ea3-add {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 8px 40px;
+  border-radius: 30px;
+  border: 1px solid #0070d2;
+  background: #0070d2;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.ea3-enrollment-container .ea3-enrollment-info button.ea3-add .ea3-plus {
+  margin-right: 8px;
+}
+
+/* Modal styles */
+.ea3-enrollment-container .ea3-modal {
+  display: block; /* Always shown */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.ea3-enrollment-container .ea3-modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 480px; /* Could be more or less, depending on screen size */
+}
+
+.ea3-enrollment-container .ea3-modal-content .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.ea3-enrollment-container .ea3-modal-content .ea3-closebtn {
+  position: absolute;
+  top: 28px;
+  right: 24px;
+  width: 16px;
+  height: 16px;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 17 17" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.99469 0.695262L8.92105 7.55533L15.8476 0.695262C16.1104 0.434913 16.5366 0.434913 16.7994 0.695262C17.0623 0.955612 17.0623 1.37772 16.7994 1.63807L9.87276 8.49867L16.7994 15.3594C17.0623 15.6198 17.0623 16.0419 16.7994 16.3022C16.5366 16.5626 16.1104 16.5626 15.8476 16.3022L8.92105 9.44133L1.99469 16.3022C1.73184 16.5626 1.30568 16.5626 1.04284 16.3022C0.779992 16.0419 0.779992 15.6198 1.04284 15.3594L7.96868 8.49867L1.04284 1.63807C0.779992 1.37772 0.779992 0.955612 1.04284 0.695262C1.30568 0.434913 1.73184 0.434913 1.99469 0.695262Z" fill="%23767676"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+  border: none;
+}
+.ea3-enrollment-container .ea3-modal-content .close:hover,
+.ea3-enrollment-container .ea3-modal-content .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ea3-enrollment-container .ea3-modal-header {
+  background-color: #f0f7fc;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 24px;
+  position: relative;
+}
+.ea3-enrollment-container .ea3-modal-body {
+  padding: 16px 24px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+.ea3-enrollment-container .ea3-modal-content .ea3-modal-body .ea3-ensure-owner {
+  background-color: #f0f7fc;
+  padding: 16px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  gap: 16px;
+  border-left: 1px solid #0070d2;
+}
+.ea3-enrollment-container .ea3-modal-body label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #606162;
+  margin-bottom: 4px;
+  display: block;
+}
+.ea3-enrollment-container .ea3-modal-body label span.ea3-star {
+  color: #f4473e;
+}
+.ea3-enrollment-container .ea3-modal-body input {
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 4px;
+  border: 1px solid #d6d6d6;
+}
+.ea3-enrollment-container .ea3-modal-body textarea {
+  width: 100%;
+  min-height: 113px;
+  border: 1px solid #d6d6d6;
+  padding: 16px;
+}
+
+.ea3-enrollment-container .ea3-modal-body input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #8e8e8e;
+}
+.ea3-enrollment-container .ea3-modal-footer {
+  gap: 8px;
+  display: flex;
+  justify-content: end;
+  padding: 8px 24px 24px;
+}
+.ea3-enrollment-container .ea3-modal-footer button.ea3-cancel {
+  padding: 6px 24px;
+  border: transparent;
+  background: transparent;
+  color: #606162;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+.accordion-button p.ea3-bold {
+  font-weight: 600;
+ }
+ .ea3-boder-16{
+  height: 12px;
+  width: 1px;
+  background-color: #D6D6D6;
+  margin: auto;
+ }
+.ea3-enrollment-container .ea3-modal-footer button.ea3-done {
+  padding: 6px 24px;
+  color: #ffffff;
+  background-color: #0070d2;
+  border: transparent;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+.accordion-button .ea3-minus-icon {
+  display: none;
+}
+
+.ow-heading-content .ea3-chooseEnrollment-icons{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  list-style: none;
+   }
+   .ow-heading-content .ea3-chooseEnrollment-icons .ea3-heading-text{
+    color: #1b1c1d;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+   }

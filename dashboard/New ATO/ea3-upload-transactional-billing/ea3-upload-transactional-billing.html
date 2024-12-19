@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../stepper.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="../sidebar.css" />
+    <link rel="stylesheet" href="../cisco-fonts.css" />
+    <link rel="stylesheet" href="../modal.css" />
+  </head>
+  <style></style>
+  <body>
+    <nav aria-label="ea3-breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Buying Program Dashboard</a>
+        </li>
+        <li class="breadcrumb-item"><a href="#">Create Request</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Request Details</li>
+      </ol>
+    </nav>
+    <!-- -------------- Heading Start ----------------- -->
+
+    <div class="ea3-request-heading">
+      <div class="ea3-header-left ea3-top-heading">
+        <div>
+          <div class="ea3-header-left-request">
+            <h2>Request ID: <span>35659</span></h2>
+            <img src="./img/edit.svg" alt="" />
+          </div>
+          <div class="ea3-sub-tittle">Epic#35659- EA Firestorm NPI Setups</div>
+        </div>
+        <div class="ea3-owner-user-box">
+          <p>Status</p>
+          <div class="ea3-badge">In Progress</div>
+        </div>
+        <div class="ea3-owner-user-box">
+          <p>Request Owner</p>
+          <div class="ea3-olivia">Olivia</div>
+        </div>
+        <div class="ea3-owner-user-box">
+          <p>Secondary Owner</p>
+          <a href="javascript:void()" class="ea3-olivia-link" onclick="openRequestModal()">Add</a>
+        </div>
+        <div class="ea3-owner-user-box">
+          <p>User Intent</p>
+          <div class="ea3-olivia">New ATO/Billing PID Setup</div>
+        </div>
+      </div>
+      <div class="ea3-btn-group">
+        <a href="../ea3-requestID/ea3-requestID.html" class="ea3-outlineBtn">Back</a>
+        <a href="../ea3-error-page/ea3-error-page.html" class="ea3-primaryBtn">Continue</a>
+      </div>
+    </div>
+    <!-- -------------- Heading End ----------------- -->
+
+    <div class="ea3-main">
+      <div class="ea3-left-content">
+        <!-- ______________ Stepper start ________________  -->
+        <div class="ea3-stepper">
+          <ul class="ea3-step-list">
+            <li class="ea3-steps active">
+              <span class="dot"></span>
+              <span class="lower-text"> Offer Structure </span>
+              <span class="date-text">May 4, 2024</span>
+            </li>
+            <li class="ea3-steps inprogress">
+              <span class="dot"></span>
+              <span class="lower-text"> Proposal Construct </span>
+              <span class="date-text">Not Selected</span>
+            </li>
+            <li class="ea3-steps">
+              <span class="dot"></span>
+              <span class="lower-text"> Commit Rules </span>
+              <span class="date-text">Not Selected</span>
+            </li>
+
+            <li class="ea3-steps">
+              <span class="dot"></span>
+              <span class="lower-text"> IB Assessment Data </span>
+              <span class="date-text">Not Selected</span>
+            </li>
+
+            <li class="ea3-steps">
+              <span class="dot"></span>
+              <span class="lower-text"> Provisioning & Fulfillment </span>
+              <span class="date-text">Not Selected</span>
+            </li>
+            <li class="ea3-steps">
+              <span class="dot"></span>
+              <span class="lower-text"> Review </span>
+              <span class="date-text">Not Selected</span>
+            </li>
+          </ul>
+        </div>
+        <!-- -------------- Stepper end ----------------- -->
+        <!-- -------------- content Start ----------------- -->
+        <div class="ea3-proposal-contract-header">
+          <h4>Proposal Construct Setup</h4>
+        </div>
+        <div class="ea3-proposal-contract">
+          <div class="ea3-proposal-contract-header">
+            <button class="ea3-tabBtn active" onclick="openTab('tab1', this)">
+              Transactional Billing PIDs
+            </button>
+            <button class="ea3-tabBtn" onclick="openTab('tab2', this)">
+              Non-Transactional Billing PID
+            </button>
+          </div>
+
+          <div class="ea3-contract-button">
+            <button class="ea3-filterBar">
+              <img src="./img/filter.svg" alt="Filter Icon" />
+              <span>Filters</span>
+            </button>
+            <div class="ea3-bar"></div>
+            <button class="ea3-secondary-outlineBtn">Preview</button>
+
+            <div class="browse">
+              <label class="ea3-primaryBtn browseBtn">
+                <input type="file" style="display: none" /><img
+                  src="./img/upload.svg"
+                  alt="Upload Icon"
+                />Upload</label
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Transactional Billing PIDs Table Start -->
+        <div id="tab1" class="tab-content">
+          <div class="table_scroll">
+            <div class="css_table">
+              <div class="css_thead">
+                <div class="css_tr">
+                  <div class="css_th">
+                    ATOs
+                    <button
+                      class="info-outline-icon targetElement"
+                      data-popover-content="<ul><li>ATO(s)  are pre-populated based on user created OWB request. </li>
+                    <li>DO NOT remove partial data from the rows to avoid upload errors. </li>
+                    </ul>"
+                    ></button>
+                  </div>
+                  <div class="css_th">
+                    Billing PID
+                    <button
+                      class="info-outline-icon targetElement"
+                      data-popover-content="<ul><li>All billing PIDs corresponding to a single/all  ATO(s) selected in the OWB request are pre-populated. </li>
+<li>User is allowed to delete some ATO-Billing PID combinations/rows from this sheet as needed (if these billing pids do not need to be part of EAMP UI for proposals).</li>
+<li>DO NOT remove partial data from the rows to avoid upload errors.</li>
+                  </ul>"
+                    ></button>
+                  </div>
+                  <div class="css_th">
+                    eGenie PID Description
+                    <button
+                      class="info-outline-icon targetElement"
+                      data-popover-content="<ul><li>Pre-populated. </li>
+                    <li>eGenie Billing PID Description derived from Product Description. </li>
+                    <li>EAMP will leverage this description for UI display. All billing PIDs will be pre-populated for 1/all ATO(s) selected in the OWB requested.</li>
+                    <li> User is allowed to delete some ATO-Billing PID combinations/rows from this sheet as needed (if these billing pids do not need to be part of EAMP UI for proposals).</li>
+                    <li> DO NOT remove partial data from the rows to avoid upload errors.</li>
+                    </ul>"
+                    ></button>
+                  </div>
+                  <div class="css_th">
+                    EA PID Description<span class="asterisk">*</span>
+                    <button
+                      class="info-outline-icon targetElement"
+                      data-popover-content="<ul><li>User input mandatory for both SW and CX PIDs.</li>
+                    <li>This billing description is displayed in EAMP UI under the respective Suite. </li>
+                    <li>Use eGenie PID description to align EA PID Description.</li>
+                    <li> For Networking portfolio, the EA pid description could be same for more than 1 billing pids (if there are multiple versions/ quantity types - essentials, advantage, premier etc.).</li>
+                    </ul>"
+                    ></button>
+                  </div>
+                  <div class="css_th">
+                    PID Group name
+                    <button
+                      class="info-outline-icon targetElement"
+                      data-popover-content="<ul><li>Optional. </li>
+                    <li>EAMP will use this data to display the billing pids in a grouped structure in the UI</li>
+                    <li>This attribute is to be updated if the billing pids in the suite need to be grouped based on certain charactersitics (product series, OnPrem/Cloud, SW/Embedded support). </li>
+                    <li>This can be left blank if all pids under the suite are to be displayed in 1 list.</li>
+                    <li>For a suite, PID Group Names should be unique. </li>
+                    <li>For Networking portfolio: DNA Switching does not have any groups, all pids are displayed in 1 list. </li>
+                    <li>Meraki Networking Infrstructure suite has groups like MR, MS100s, MS200s.  </li>
+                    <li>For Applications portfolio: AppDynamics has Prod Saas - Core, Prod Saas -Add ons. </li>
+                    <li>For Security portfolio: ISE has Identity Services engine, Support Options (which include embedded support).</li>
+                    </ul>"
+                    ></button>
+                  </div>
+                  <div class="css_th">
+                    License Classification
+                    <button
+                      class="info-outline-icon targetElement"
+                      data-popover-content="<ul><li>Optional.</li>
+                    <li>Columns PID Group Name, License Classification, PID Group sequence are optional. If Col PID Group Name is defined, Col PID Group sequence is mandatory </li>
+                    <li>This attribute defines the EAMP UI Columns across which the quantity can be purchased. </li>
+                    <li>For Networking/Application portfolio, if the UI column is Advantage, the UI is enabled for the user to enter qty of purchase only the Advantage column. </li>
+                    <li>For Security portfolio, this is NA.</li>
+                    </ul>"
+                    ></button>
+                  </div>
+                  <div class="css_th">
+                    PID Group Sequence
+                    <button
+                      class="info-outline-icon targetElement"
+                      data-popover-content="<ul><li>Mandatory. </li>
+                    <li>PID Group sequence is mandatory if PID group name is updated. This attribute is used to display the groups based on the sequence provided. </li>
+                    <li> PID Groups sequence has to same for all billing pids within the group. </li>
+                    <li>PID Group Name to PID Group sequence should be unique.</li>
+                    </ul>"
+                    ></button>
+                  </div>
+                  <div class="css_th">
+                    PID Sequence<span class="asterisk">*</span>
+                    <button
+                      class="info-outline-icon targetElement"
+                      data-popover-content="<ul><li>Mandatory for both SW and CX Billing PIDs</li>
+                    <li>User to provide the sequence in which the EAMP UI has to be displayed </li>
+                    <li>Billing pids will be displayed in the sequence provided with in each group (if applicable) in EAMP UI during proposal creation  </li>
+                    <li> Billling PIDs sequence has to be unique within a group</li>
+                    </ul>"
+                    ></button>
+                  </div>
+                  <div class="css_th">
+                    CX Tier<button
+                      class="info-outline-icon targetElement"
+                      data-popover-content="<ul><li>Applicable for only CX ATO's.</li>
+                  <li>User selection from the LOV is needed only for CX SSPT billing pids ( if same GSP is used to define 1/all 3 tiers of SSPT billing pids </li>
+                  <li>User to select the appropriate tier from LOV across each SSPT billing pid </li>
+                  <li>For Success tracks, the GSP to Tier mapping is defined as unique in SPA.  No update is required by user</li>
+                  <li>For Security ISE SSPT, the GSP is EANT for all 3 tiers (Tier1, Tier2, Tier3).  Each billing pid </li>
+                  <li>For e.g.: E3-ISE-SVS1, E3-ISE-SVS2 & E3-ISE-SVS3 are 3 billing pids with same GSP</li>
+                  </ul>"
+                    ></button>
+                  </div>
+                </div>
+              </div>
+              <div class="css_tbody">
+                <div class="css_tr parent">
+                  <div class="css_sd">
+                    <button
+                      class="icon-plus-minus"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                    E3-N-AS
+                  </div>
+                  <div class="css_sd">E3N-C29601E-E</div>
+                  <div class="css_td">C2960X DNA Essential...</div>
+                  <div class="css_td">
+                    <input type="text" placeholder="C2960X 48-port..." />
+                  </div>
+                  <div class="css_td">
+                    <input type="text" placeholder="Group Name" />
+                  </div>
+                  <div class="css_td">
+                    <div class="d-flex justify-content-between">
+                      Advance
+
+                      <button
+                        class="icon-down-chevrons dropdown-target dropdown-toggle"
+                        id="dropdownTarget"
+                      ></button>
+                    </div>
+                  </div>
+                  <div class="css_td disabled_input">
+                    <input type="text" placeholder="Group Sequence" />
+                  </div>
+                  <div class="css_td">
+                    <input type="text" placeholder="10" />
+                  </div>
+                  <div class="css_td"></div>
+                </div>
+                <div class="css_tr child">
+                  <div class="css_sd"></div>
+                  <div class="css_sd">EAE-SK-IM-EN-CAD</div>
+                  <div class="css_td">C2960X DNA Essential...</div>
+                  <div class="css_td">
+                    <input type="text" placeholder="C2960X 48-port..." />
+                  </div>
+                  <div class="css_td">
+                    <input type="text" placeholder="Group Name" />
+                  </div>
+                  <div class="css_td">
+                    <div class="d-flex justify-content-between">
+                      Advance
+
+                      <button
+                        class="icon-down-chevrons dropdown-target dropdown-toggle"
+                        id="dropdownTarget"
+                      ></button>
+                    </div>
+                  </div>
+                  <div class="css_td disabled_input">
+                    <input type="text" placeholder="Group Sequence" />
+                  </div>
+                  <div class="css_td">
+                    <input type="text" placeholder="10" />
+                  </div>
+                  <div class="css_td"></div>
+                </div>
+                <div class="css_tr child">
+                  <div class="css_sd"></div>
+                  <div class="css_sd">EAE-SK-IM-EN-CMAD</div>
+                  <div class="css_td">C2960X DNA Essential...</div>
+                  <div class="css_td">
+                    <input type="text" placeholder="C2960X 48-port..." />
+                  </div>
+                  <div class="css_td">
+                    <input type="text" placeholder="Group Name" />
+                  </div>
+                  <div class="css_td">
+                    <div class="d-flex justify-content-between">
+                      Advance
+
+                      <button
+                        class="icon-down-chevrons dropdown-target dropdown-toggle"
+                        id="dropdownTarget"
+                      ></button>
+                    </div>
+                  </div>
+                  <div class="css_td disabled_input">
+                    <input type="text" placeholder="Group Sequence" />
+                  </div>
+                  <div class="css_td">
+                    <input type="text" placeholder="10" />
+                  </div>
+                  <div class="css_td"></div>
+                </div>
+                <div class="css_tr child">
+                  <div class="css_sd"></div>
+                  <div class="css_sd">EAE-SK-IM-EN-MTS</div>
+                  <div class="css_td">C2960X DNA Essential...</div>
+                  <div class="css_td">
+                    <input type="text" placeholder="C2960X 48-port..." />
+                  </div>
+                  <div class="css_td">
+                    <input type="text" placeholder="Group Name" />
+                  </div>
+                  <div class="css_td">
+                    <div class="d-flex justify-content-between">
+                      Advance
+
+                      <button
+                        class="icon-down-chevrons dropdown-target dropdown-toggle"
+                        id="dropdownTarget"
+                      ></button>
+                    </div>
+                  </div>
+                  <div class="css_td disabled_input">
+                    <input type="text" placeholder="Group Sequence" />
+                  </div>
+                  <div class="css_td">
+                    <input type="text" placeholder="10" />
+                  </div>
+                  <div class="css_td"></div>
+                </div>
+                <div class="css_tr child">
+                  <div class="css_sd"></div>
+                  <div class="css_sd">EAE-SK-A2-EN-HOST</div>
+                  <div class="css_td">C2960X DNA Essential...</div>
+                  <div class="css_td">
+                    <input type="text" placeholder="C2960X 48-port..." />
+                  </div>
+                  <div class="css_td">
+                    <input type="text" placeholder="Group Name" />
+                  </div>
+                  <div class="css_td">
+                    <div class="d-flex justify-content-between">
+                      Advance
+
+                      <button
+                        class="icon-down-chevrons dropdown-target dropdown-toggle"
+                        id="dropdownTarget"
+                      ></button>
+                    </div>
+                  </div>
+                  <div class="css_td disabled_input">
+                    <input type="text" placeholder="Group Sequence" />
+                  </div>
+                  <div class="css_td">
+                    <input type="text" placeholder="10" />
+                  </div>
+                  <div class="css_td"></div>
+                </div>
+                <div class="css_tr parent">
+                  <div class="css_sd">
+                    <button
+                      class="icon-plus-minus"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                    E3-N-MDS
+                  </div>
+                  <div class="css_sd">E3N-MDS9300-G-A</div>
+                  <div class="css_td">E3N-MDS9300-G-A</div>
+                  <div class="css_td">
+                    <input type="text" placeholder="C2960X 48-port..." />
+                  </div>
+                  <div class="css_td">
+                    <input type="text" placeholder="Group Name" />
+                  </div>
+                  <div class="css_td">
+                    <div class="d-flex justify-content-between">
+                      General
+
+                      <button
+                        class="icon-down-chevrons dropdown-target dropdown-toggle"
+                        id="dropdownTarget"
+                      ></button>
+                    </div>
+                  </div>
+                  <div class="css_td disabled_input">
+                    <input type="text" placeholder="Group Sequence" />
+                  </div>
+                  <div class="css_td">
+                    <input type="text" placeholder="10" />
+                  </div>
+                  <div class="css_td"></div>
+                </div>
+                <div class="css_tr child">
+                  <div class="css_sd"></div>
+                  <div class="css_sd">E3N-MDS9700-G-A</div>
+                  <div class="css_td">E3N-MDS9700-G-A</div>
+                  <div class="css_td">
+                    <input type="text" placeholder="C2960X 48-port..." />
+                  </div>
+                  <div class="css_td">
+                    <input type="text" placeholder="Group Name" />
+                  </div>
+                  <div class="css_td">
+                    <div class="d-flex justify-content-between">
+                      General
+
+                      <button
+                        class="icon-down-chevrons dropdown-target dropdown-toggle"
+                        id="dropdownTarget"
+                      ></button>
+                    </div>
+                  </div>
+                  <div class="css_td disabled_input">
+                    <input type="text" placeholder="Group Sequence" />
+                  </div>
+                  <div class="css_td">
+                    <input type="text" placeholder="10" />
+                  </div>
+                  <div class="css_td"></div>
+                </div>
+                <div class="css_tr child">
+                  <div class="css_sd"></div>
+                  <div class="css_sd">E3N-MDS9100-G-A</div>
+                  <div class="css_td">MDS9300 EA ADVANCE</div>
+                  <div class="css_td">
+                    <input type="text" placeholder="C2960X 48-port..." />
+                  </div>
+                  <div class="css_td">
+                    <input type="text" placeholder="Group Name" />
+                  </div>
+                  <div class="css_td">
+                    <div class="d-flex justify-content-between">
+                      General
+
+                      <button
+                        class="icon-down-chevrons dropdown-target dropdown-toggle"
+                        id="dropdownTarget"
+                      ></button>
+                    </div>
+                  </div>
+                  <div class="css_td disabled_input">
+                    <input type="text" placeholder="Group Sequence" />
+                  </div>
+                  <div class="css_td">
+                    <input type="text" placeholder="10" />
+                  </div>
+                  <div class="css_td"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--  Transactional Billing PIDs Table End-->
+          <!-- Pagination Start -->
+          <div class="pagination-wrap">
+            <div class="sorting-wrapper">
+              <div class="result-count">Rows per page</div>
+
+              <select class="orderby">
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select>
+
+              <div class="result-count">1-10 of 100</div>
+            </div>
+
+            <ul class="pagination">
+              <li class="prev-page-last"><button disabled></button></li>
+              <li class="prev-page"><button disabled></button></li>
+              <li><button class="active">1</button></li>
+              <li><button>2</button></li>
+              <li><button>3</button></li>
+              <li><button>4</button></li>
+              <li><button>...</button></li>
+              <li><button>10</button></li>
+              <li class="next-page"><button></button></li>
+              <li class="next-page-last"><button></button></li>
+            </ul>
+          </div>
+          <!-- Pagination End -->
+        </div>
+        <div id="tab2" class="tab-content">
+          <!-- Non-Transactional Billing PID Table Start -->
+          <div class="table_scroll table_scroll-normal">
+            <div class="css_table">
+              <div class="css_thead">
+                <div class="css_tr">
+                  <div class="css_th">
+                    ATOs
+                    <button
+                      class="info-outline-icon targetElement"
+                      data-popover-content="<ul><li>ATO(s)  are pre-populated based on user created OWB request. </li>
+                    <li>DO NOT remove partial data from the rows to avoid upload errors. </li>
+                    </ul>"
+                    ></button>
+                  </div>
+                  <div class="css_th">
+                    Billing PID
+                    <button
+                      class="info-outline-icon targetElement"
+                      data-popover-content="<ul><li>All billing PIDs corresponding to a single/all  ATO(s) selected in the OWB request are pre-populated. </li>
+<li>User is allowed to delete some ATO-Billing PID combinations/rows from this sheet as needed (if these billing pids do not need to be part of EAMP UI for proposals).</li>
+<li>DO NOT remove partial data from the rows to avoid upload errors.</li>
+                  </ul>"
+                    ></button>
+                  </div>
+                </div>
+              </div>
+              <div class="css_tbody">
+                <div class="css_tr parent">
+                  <div class="css_sd">E3-N-AS</div>
+                  <div class="css_sd">E3N-C29601E-E</div>
+                </div>
+                <div class="css_tr child">
+                  <div class="css_sd">E3-N-AS</div>
+                  <div class="css_sd">EAE-SK-IM-EN-CAD</div>
+                </div>
+                <div class="css_tr child">
+                  <div class="css_sd">E3-N-AS</div>
+                  <div class="css_sd">EAE-SK-IM-EN-CMAD</div>
+                </div>
+                <div class="css_tr child">
+                  <div class="css_sd">E3-N-AS</div>
+                  <div class="css_sd">EAE-SK-IM-EN-MTS</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Non-Transactional Billing PID Table End -->
+        </div>
+      </div>
+
+      <!-- -------------- Content End ----------------- -->
+      <!-- -------------- Sidebar Start ----------------- -->
+      <div class="ea3-right-content">
+        <div class="ea3-sidebar">
+          <div class="ea3-progress-indicator">
+            <h3>Good start! Keep it moving and make it happen.</h3>
+            <div class="ea3-progress-bar">
+              <div role="donutbar" style="--value: 20; --fg: #fbab2c">
+                <span class="ea3-donutbar-value">20%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ea3-sidebar-card">
+            <label>Discount Central Pricing</label>
+            <p>
+              Make sure you finish Discount Central & Pricing Factors Setup before publishing Data.
+            </p>
+            <button class="ea3-primaryBtn">Make as Done</button>
+          </div>
+          <div class="ea3-divider"></div>
+          <div class="ea3-sidebar-card">
+            <label>EA Factors</label>
+            <p>Make sure you finish EA Factors Setup before publishing Data.</p>
+            <button class="ea3-primaryBtn">Make as Done</button>
+          </div>
+          <div class="ea3-publish-data-card">
+            <label>Publish Data to</label>
+            <div class="ea3-publish-list">
+              <img src="./img/close.svg" alt="" />
+              <div class="ea-3-list-title">
+                <p>EAMP</p>
+                <span>Not Selected yet</span>
+              </div>
+            </div>
+            <div class="ea3-divider3"></div>
+            <div class="ea3-publish-list">
+              <img src="./img/close.svg" alt="" />
+              <div class="ea-3-list-title">
+                <p>HANA</p>
+                <span>Not Selected yet</span>
+              </div>
+            </div>
+            <div class="ea3-divider3"></div>
+            <div class="ea3-publish-list">
+              <img src="./img/close.svg" alt="" />
+              <div class="ea-3-list-title">
+                <p>EAWS</p>
+                <span>Not Selected yet</span>
+                <div class="ea3-alert-box">
+                  <img src="./img/excelimation-blue-icon.svg" alt="" />
+                  <p>
+                    Before publishing to production, make sure you have made adjustment to EAWS.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- -------------- Sidebar End ----------------- -->
+    </div>
+    <!-- modal -->
+    <div id="requestModal" class="ea3-modal requestModal">
+      <div class="ea3-modal-content requestModalContent">
+        <div class="ea3-modal-header requestHeader">
+          Assign Owner
+          <button class="ea3-closebtn closeIcon" onclick="closeRequestModal()"></button>
+        </div>
+        <div class="ea3-modal-body requestBody">
+          <div class="requestInputBox">
+            <label for="ownerEmail">secondary owner</label>
+            <input
+              type="email"
+              id="ownerEmail"
+              name="ownerEmail"
+              placeholder="Enter secondary owner name"
+            />
+          </div>
+        </div>
+        <div class="ea3-modal-footer requestFooter">
+          <button class="ow-outlineBtn" onclick="closeRequestModal()">Cancel</button>
+          <button class="ow-primaryBtn" onclick="redirectToEnrollment()">Done</button>
+        </div>
+        <!-- href="../ea3-enrollment/ea3-enrollment.html" -->
+      </div>
+    </div>
+    <div id="ow-overlay-container" class="ow-overlay-container" onclick="closeSidebar()"></div>
+    <div id="ow-overlay" class="ow-overlay"></div>
+
+    <!-- Popover HTML -->
+    <div id="popover" class="popover-content"></div>
+    <!-- /Popover HTML -->
+    <!-- Dropdown HTML -->
+    <div id="dropdownmenu" class="dropdownmenu">
+      <ul>
+        <li><a href="#">Option 1</a></li>
+        <li><a href="#">Option 2</a></li>
+        <li><a href="#">Option 3</a></li>
+      </ul>
+    </div>
+    <!-- /Dropdown HTML -->
+    <script src="../modal.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

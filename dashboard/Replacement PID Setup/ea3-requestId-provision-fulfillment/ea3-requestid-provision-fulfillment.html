@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./ea3-requestid-provision-fulfillment.css" />
+    <link rel="stylesheet" href="../stepper.css" />
+    <link rel="stylesheet" href="../sidebar.css" />
+    <link rel="stylesheet" href="../cisco-fonts.css" />
+    <link rel="stylesheet" href="../modal.css" />
+  </head>
+  <body>
+    <nav aria-label="ea3-breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Buying Program Dashboard</a>
+        </li>
+        <li class="breadcrumb-item"><a href="#">Create Request</a></li>
+        <li class="breadcrumb-item active" aria-current="page">
+          Request Details
+        </li>
+      </ol>
+    </nav>
+    <!-- -------------- Heading Start ----------------- -->
+    <div class="ea3-request-heading">
+      <div class="ea3-header-left ea3-top-heading">
+        <div>
+          <div class="ea3-header-left-request">
+            <h2>Request ID: <span>35659</span></h2>
+            <img src="./img/edit.svg" alt="" />
+          </div>
+          <div class="ea3-sub-tittle">Epic#35659- EA Firestorm NPI Setups</div>
+        </div>
+        <div class="ea3-owner-user-box">
+          <p>Status</p>
+          <div class="ea3-badge">In Progress</div>
+        </div>
+        <div class="ea3-owner-user-box">
+          <p>Request Owner</p>
+          <div class="ea3-olivia">Olivia</div>
+        </div>
+        <div class="ea3-owner-user-box">
+          <p>Secondary Owner</p>
+          <a
+          href="javascript:void()"
+          class="ea3-olivia-link"
+          onclick="openRequestModal()"
+          >Add</a
+        >
+        </div>
+        <div class="ea3-owner-user-box">
+          <p>User Intent</p>
+          <div class="ea3-olivia">Replacement PID Setup</div>
+        </div>
+      </div>
+      <div class="ea3-btn-group">
+        <a
+          href="../ea3-requestID-ib-assesment-data/ea3-requestid-ib-assesment-data.html"
+          class="ea3-outlineBtn"
+          >Back</a
+        >
+        <a
+          href="../ea3-review-summary/ea3-review-summary.html"
+          class="ea3-primaryBtn"
+          >Continue</a
+        >
+      </div>
+    </div>
+    <!-- -------------- Heading End ----------------- -->
+
+    <div class="ea3-main">
+      <div class="ea3-left-content">
+        <!-- ______________ Stepper start ________________  -->
+        <div class="ea3-stepper">
+          <ul class="ea3-step-list">
+            <li class="ea3-steps active">
+              <span class="dot"></span>
+              <span class="lower-text"> Offer Structure </span>
+              <span class="date-text">4 May,2024</span>
+            </li>
+            <li class="ea3-steps active">
+              <span class="dot"></span>
+              <span class="lower-text"> Proposal Construct </span>
+              <span class="date-text">4 May,2024</span>
+            </li>
+            <li class="ea3-steps active">
+              <span class="dot"></span>
+              <span class="lower-text"> Commit Rules </span>
+              <span class="date-text">5 May,2024</span>
+            </li>
+
+            <li class="ea3-steps active">
+              <span class="dot"></span>
+              <span class="lower-text"> IB Assessment Data </span>
+              <span class="date-text">6 May,2024</span>
+            </li>
+
+            <li class="ea3-steps inprogress">
+              <span class="dot"></span>
+              <span class="lower-text"> Provisioning & Fulfillment </span>
+              <span class="date-text">Please Select</span>
+            </li>
+            <li class="ea3-steps">
+              <span class="dot"></span>
+              <span class="lower-text"> Review </span>
+              <span class="date-text">Not Selected</span>
+            </li>
+          </ul>
+        </div>
+        <!-- -------------- Stepper end ----------------- -->
+        <!-- -------------- content Start ----------------- -->
+        <div class="ea3-alert1 alert-primary">
+          <img src="./img/error-check.svg" alt="" />
+          <p>
+            Before publishing to production, make sure you have made adjustment
+            to EAWS.
+          </p>
+        </div>
+        <!-- <div class="ea3-proposal-setup">
+          <h5>Provisioning and fulfilment setup</h5>
+          <div>
+          <a
+          href=""
+          class="ea3-primaryBtn"
+          >Preview</a
+        >
+      </div>
+        </div> -->
+        <!-- <div class="ea3-uploaded-doc">
+          <img src="./img/Files.svg" alt="" />
+          <div class="doc-details">
+            <p>ATO_TO_ALC_PA_MAPPING_23-May-2024.xlsx</p>
+            <span>200 KB</span>
+          </div>
+          <div class="doc-modify">
+            <button><img src="./img/fileDownload.svg" alt="" /></button>
+            <button><img src="./img/trash.svg" alt="" /></button>
+          </div>
+        </div> -->
+        <!-- <div class="ea3-uploaded-doc">
+          <img src="./img/Files.svg" alt="" />
+          <div class="doc-details">
+            <p>EAWSData_36706.xlsx</p>
+            <span>200 KB</span>
+          </div>
+          <div class="ea3-btn-group">
+            <a
+              href=""
+              class="ea3-outlineBtn"
+              > <span>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.29501 6.10863L6.00001 8.97363H5.99626L3.70501 6.10863C3.57751 5.94363 3.60376 5.71113 3.76501 5.57988C3.93001 5.45238 4.16251 5.47863 4.29376 5.63988L5.67001 7.36113V1.84863C5.67001 1.64238 5.83876 1.47363 6.04501 1.47363C6.25126 1.47363 6.42001 1.64238 6.42001 1.84863V7.24863L7.70626 5.63988C7.83751 5.47863 8.07376 5.44863 8.23501 5.57988C8.39626 5.71113 8.42251 5.94738 8.29501 6.10863ZM10.5 7.9649C10.5 7.75865 10.6687 7.5899 10.875 7.5899C11.0813 7.5899 11.25 7.75865 11.25 7.9649V10.0687C11.25 10.2749 11.0813 10.4437 10.875 10.4437H1.125C0.91875 10.4437 0.75 10.2749 0.75 10.0687V7.9649C0.75 7.75865 0.91875 7.5899 1.125 7.5899C1.33125 7.5899 1.5 7.75865 1.5 7.9649V9.69366H10.5V7.9649Z" fill="#0070D2"/>
+                  </svg>
+              </span> Download</a
+            >
+          </div>
+        </div> -->
+        <!-- Replacement PID Setup html  -->
+        <div class="ea3-proposal-setup">
+          <h5>Provisioning and fulfilment setup</h5>
+        </div>
+        <div class="ea3-uploaded-doc">
+          <img src="./img/Files.svg" alt="" />
+          <div class="doc-details">
+            <p>EAWSData_36706.xlsx</p>
+            <span>200 KB</span>
+          </div>
+          <div class="ea3-btn-group">
+            <a href="">
+              <span><img src="./img/download-icon.svg" /></span
+            ></a>
+          </div>
+        </div>
+        <div class="ea3-ato-summary">See current mapping</div>
+        <div class="ea3-search-add-container">
+          <div class="ea3-search">
+            <span class="fa fa-search"
+              ><img src="./img/search.svg" alt="Add"
+            /></span>
+            <input placeholder="Search ATO(s)" />
+          </div>
+          <div class="ea3-button-container">
+            <button class="ea3-add">Add More</button>
+          </div>
+        </div>
+
+        <table class="ea3-requestid">
+          <thead class="ea3-table-header">
+            <tr>
+              <th>
+                <div class="ea3-structure-column">
+                  <input type="checkbox" />Source ATO
+                </div>
+              </th>
+              <th>Current Billing PID</th>
+              <th>Replacement Billing PID</th>
+              <th>Migration</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody class="ea3-table-body">
+            <tr class="ea3-main-row ea3-toogle">
+              <td class="ea3-bold-font">
+                <div class="ea3-structure-column">
+                  <input type="checkbox" />
+                  E3-SEC-ETD-ADV
+                </div>
+              </td>
+              <td>
+                <div class="ea3-startdate-column">E2F-SEC-DUO-EES-F</div>
+              </td>
+              <td>
+                <div class="ea3-enddate-column">E3N-ENTWAN-C-T4-A</div>
+              </td>
+              <td>
+                <div class="ea3-startdate-column">Yes</div>
+              </td>
+              <td>
+                <div class="ea3-enddate-column">
+                  <img src="./img/trash.svg" alt="" />
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Replacement PID Setup html  -->
+      </div>
+      <!-- -------------- Content End ----------------- -->
+      <!-- -------------- Sidebar Start ----------------- -->
+      <div class="ea3-right-content">
+        <div class="ea3-sidebar">
+          <div class="ea3-progress-indicator">
+            <h3>Good start! Keep it moving and make it happen.</h3>
+            <div class="ea3-progress-bar">
+              <div role="donutbar" style="--value: 80; --fg: #fbab2c">
+                <span class="ea3-donutbar-value">80%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ea3-sidebar-card">
+            <label>Discount Central Pricing</label>
+            <p>
+              Make sure you finish Discount Central & Pricing Factors Setup
+              before publishing Data.
+            </p>
+            <button class="ea3-primaryBtn">Make as Done</button>
+          </div>
+          <div class="ea3-divider"></div>
+          <div class="ea3-sidebar-card">
+            <label>EA Factors</label>
+            <p>Make sure you finish EA Factors Setup before publishing Data.</p>
+            <button class="ea3-primaryBtn">Make as Done</button>
+          </div>
+          <!-- <div class="ea3-divider2"></div>
+          <div class="ea3-sidebar-card">
+            <label>Checklist</label>
+            <div class="ea3-radio-list">
+              <ul>
+                <li>
+                  <img src="./img/sidebar-check.svg" alt="">
+                  <span>Offer Structure</span>
+                </li>
+                <li>
+                  <img src="./img/sidebar-check.svg" alt="">
+                  <span>Proposal Construct</span>
+                </li>
+                <li>
+                  <img src="./img/sidebar-check.svg" alt="">
+                  <span>Commit Rules Setup</span>
+                </li>
+                <li>
+                  <img src="./img/sidebar-check.svg" alt="">
+                  <span>IB Assessment Data</span>
+                </li>
+                <li>
+                  <input type="radio" value="5" />
+                  <span>Provisioning & Fulfillment</span>
+                </li>
+              </ul>
+            </div>
+          </div> -->
+          <div class="ea3-publish-data-card">
+            <label>Publish Data to</label>
+            <div class="ea3-publish-list">
+              <img src="./img/close.svg" alt="" />
+              <div class="ea-3-list-title">
+                <p>EAMP</p>
+                <span>Not Selected yet</span>
+              </div>
+            </div>
+            <div class="ea3-divider3"></div>
+            <div class="ea3-publish-list">
+              <img src="./img/close.svg" alt="" />
+              <div class="ea-3-list-title">
+                <p>HANA</p>
+                <span>Not Selected yet</span>
+              </div>
+            </div>
+            <div class="ea3-divider3"></div>
+            <div class="ea3-publish-list">
+              <img src="./img/close.svg" alt="" />
+              <div class="ea-3-list-title">
+                <p>EAWS</p>
+                <span>Not Selected yet</span>
+                <div class="ea3-alert-box">
+                  <img src="./img/excelimation-blue-icon.svg" alt="" />
+                  <p>
+                    Before publishing to production, make sure you have made
+                    adjustment to EAWS.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- -------------- Sidebar End ----------------- -->
+    </div>
+    <div id="requestModal" class="ea3-modal requestModal">
+      <div class="ea3-modal-content requestModalContent">
+        <div class="ea3-modal-header requestHeader">
+          Assign Owner
+          <button
+            class="ea3-closebtn closeIcon"
+            onclick="closeRequestModal()"
+          ></button>
+        </div>
+        <div class="ea3-modal-body requestBody">
+          <div class="requestInputBox">
+            <label for="ownerEmail">secondary owner</label>
+            <input
+              type="email"
+              id="ownerEmail"
+              name="ownerEmail"
+              placeholder="Enter secondary owner name"
+            />
+          </div>
+        </div>
+        <div class="ea3-modal-footer requestFooter">
+          <button class="ow-outlineBtn" onclick="closeRequestModal()">
+            Cancel
+          </button>
+          <button class="ow-primaryBtn" onclick="redirectToEnrollment()">
+            Done
+          </button>
+        </div>
+        <!-- href="../ea3-enrollment/ea3-enrollment.html" -->
+      </div>
+    </div>
+
+    <div
+      id="ow-overlay-container"
+      class="ow-overlay-container"
+      onclick="closeSidebar()"
+    ></div>
+    <div id="ow-overlay" class="ow-overlay"></div>
+
+  </body>
+  <script src="../modal.js"></script>
+</html>

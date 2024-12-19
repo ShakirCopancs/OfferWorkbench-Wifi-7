@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ea3 enrollment</title>
+    <link rel="stylesheet" href="./css/ea3-enrollment.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="../cisco-fonts.css" />
+    <link rel="stylesheet" href="../modal.css" />
+  </head>
+
+  <body>
+    <div class="ea3-enrollment-container">
+      <div class="ea3-header">
+        <div class="ea3-header-left ea3-top-heading">
+          <div>
+            <h2>Create request for EA3.0</h2>
+            <div class="ea3-sub-tittle">
+              Epic#35659- EA Firestorm NPI Setups
+            </div>
+          </div>
+          <div class="ea3-owner-user-box">
+            <p>Status</p>
+            <div class="ea3-badge">In Progress</div>
+          </div>
+          <div class="ea3-owner-user-box">
+            <p>Request Owner</p>
+            <div class="ea3-olivia">Olivia</div>
+          </div>
+          <div class="ea3-owner-user-box">
+            <p>Secondary Owner</p>
+            <a
+              href="javascript:void()"
+              class="ea3-olivia-link"
+              onclick="openRequestModal()"
+              >Add
+          </a>
+          </div>
+          <div class="ea3-owner-user-box">
+            <p>User Intent</p>
+            <div class="ea3-olivia">Replacement PID Setup</div>
+          </div>
+        </div>
+        <div class="ea3-button-group">
+          <button class="ea3-discard" onclick="openDiscardModal()">
+            Discard
+          </button>
+          <a href="#" class="ea3-request">Create Request</a>
+        </div>
+      </div>
+
+      <div class="ea3-enrollment-info">
+        <img src="./img/Illustration.png" class="illustration" />
+        <h3>Start by adding an Enrollment(s), Pool(s) and ATO(s)</h3>
+        <p>
+          Enrollments rise, pools fill quickly, and ATOs streamline processes,
+          ensuring smooth and efficient operations.
+        </p>
+        <button class="ea3-add" onclick="openSidebar()">
+          <img src="./img/plus.svg" class="ea3-plus" />Add
+        </button>
+      </div>
+      <div
+        id="ow-overlay-container"
+        class="ow-overlay-container"
+        onclick="closeSidebar()"
+      ></div>
+      <div id="ow-overlay" class="ow-overlay"></div>
+
+      <div class="offcanvas-sidebar" id="offcanvas-sidebar">
+        <div class="offcanvas-sidebar-header" id="offcanvas-sidebar-header">
+          Add ATOs
+        </div>
+        <a href="#" class="closebtn" onclick="closeSidebar()">&times;</a>
+
+        <div class="offcanvas-sidebar-body">
+          <div class="ow-heading-content" id="ow-heading-content">
+            <h5>Select Enrollments</h5>
+            <div class="ow-toggle-content">
+              <label class="switch">
+                <input type="radio" />
+                <span class="slider round"></span>
+              </label>
+              <span>Show selected only</span>
+            </div>
+          </div>
+          <div class="sidebar-auto-scroll" id="sidebar-auto-scroll">
+            <div class="ow-accordion-content">
+              <div class="accordion">
+                <button class="accordion-button">
+                  <div class="ea3-plus-icon">
+                    <img src="./img/add-outline.svg" alt="" />
+                  </div>
+                  <div class="ea3-minus-icon">
+                    <img src="./img/minus-icon.svg" alt="" />
+                  </div>
+                  <input type="radio" />
+                  <img src="./img/clone-filled.svg" alt="" />
+                  <p>Security (4 Pools)</p>
+                </button>
+                <div class="accordion-content">
+                  <span>Select Pool(s)</span>
+                  <div class="accordion-button">
+                    <div class="ea3-plus-icon">
+                      <img src="./img/add-outline.svg" alt="" />
+                    </div>
+                    <div class="ea3-minus-icon">
+                      <img src="./img/minus-icon.svg" alt="" />
+                    </div>
+                    <input type="radio" />
+                    <img src="./img/Add-Ons.svg" alt="" />
+                    <p>Add-on Products (8 ATOs)</p>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="ow-accordion-items">
+                      <input type="text" placeholder="Search ATO(s)" />
+                      <div class="ow-ato-list">
+                        <input type="radio" />
+                        <img src="./img/optionAccordion.svg" alt="" />
+                        <p>E3-SEC-ETD-ADV</p>
+                      </div>
+                      <div class="ow-ato-list">
+                        <input type="radio" />
+                        <img src="./img/optionAccordion.svg" alt="" />
+                        <p>E3-SEC-ETD-PRE</p>
+                      </div>
+                      <div class="ow-ato-list">
+                        <input type="radio" />
+                        <img src="./img/optionAccordion.svg" alt="" />
+                        <p>E3-SEC-DDOS</p>
+                      </div>
+                      <div class="ow-ato-list">
+                        <input type="radio" />
+                        <img src="./img/optionAccordion.svg" alt="" />
+                        <p>E3-SEC-ADDONS</p>
+                      </div>
+                      <div class="ow-ato-list">
+                        <input type="radio" />
+                        <img src="./img/optionAccordion.svg" alt="" />
+                        <p>E3-SEC-ETD-ADV</p>
+                      </div>
+                      <div class="ow-ato-list">
+                        <input type="radio" />
+                        <img src="./img/optionAccordion.svg" alt="" />
+                        <p>E3-SEC-ETD-PRE</p>
+                      </div>
+                      <div class="ow-ato-list">
+                        <input type="radio" />
+                        <img src="./img/optionAccordion.svg" alt="" />
+                        <p>E3-SEC-DDOS</p>
+                      </div>
+                      <div class="ow-ato-list">
+                        <input type="radio" />
+                        <img src="./img/optionAccordion.svg" alt="" />
+                        <p>E3-SEC-ADDONS</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-button">
+                    <img src="./img/add-outline.svg" alt="" />
+                    <input type="radio" />
+                    <img src="./img/Add-Ons.svg" alt="" />
+                    <p>Cloud Networking Security (8 ATOs)</p>
+                  </div>
+                  <div class="accordion-content">
+                    <span class="accordion-content">content</span>
+                  </div>
+                  <div class="accordion-button">
+                    <img src="./img/add-outline.svg" alt="" />
+                    <input type="radio" />
+                    <img src="./img/Add-Ons.svg" alt="" />
+                    <p>Protection (8 ATOs)</p>
+                  </div>
+                  <div class="accordion-content">
+                    <span class="accordion-content">content</span>
+                  </div>
+                  <div class="accordion-button">
+                    <img src="./img/add-outline.svg" alt="" />
+                    <input type="radio" />
+                    <img src="./img/Add-Ons.svg" alt="" />
+                    <p>Zero Trust (8 ATOs)</p>
+                  </div>
+                  <div class="accordion-content">
+                    <span class="accordion-content">content</span>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion">
+                <button class="accordion-button">
+                  <div class="ea3-plus-icon">
+                    <img src="./img/add-outline.svg" alt="" />
+                  </div>
+                  <div class="ea3-minus-icon">
+                    <img src="./img/minus-icon.svg" alt="" />
+                  </div>
+
+                  <input type="radio" />
+                  <img src="./img/clone-filled.svg" alt="" />
+                  <p>Networking Infrastructure (4 Pools)</p>
+                </button>
+                <div class="accordion-content">
+                  <p>Content for section 1...</p>
+                </div>
+              </div>
+              <div class="accordion">
+                <button class="accordion-button">
+                  <div class="ea3-plus-icon">
+                    <img src="./img/add-outline.svg" alt="" />
+                  </div>
+                  <div class="ea3-minus-icon">
+                    <img src="./img/minus-icon.svg" alt="" />
+                  </div>
+                  <input type="radio" />
+                  <img src="./img/clone-filled.svg" alt="" />
+                  <p>Applications Infrastructure (4 Pools)</p>
+                </button>
+                <div class="accordion-content">
+                  <p>Content for section 1...</p>
+                </div>
+              </div>
+              <div class="accordion">
+                <button class="accordion-button">
+                  <div class="ea3-plus-icon">
+                    <img src="./img/add-outline.svg" alt="" />
+                  </div>
+                  <div class="ea3-minus-icon">
+                    <img src="./img/minus-icon.svg" alt="" />
+                  </div>
+                  <input type="radio" />
+                  <img src="./img/clone-filled.svg" alt="" />
+                  <p>Services (4 Pools)</p>
+                </button>
+                <div class="accordion-content">
+                  <p>Content for section 1...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ow-sidebar-footer" id="ow-sidebar-footer">
+          <a
+            href="../ea3-create-request/ea3-create-request.html"
+            class="ow-primaryBtn"
+            >Next</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- modal -->
+    <div id="requestModal" class="ea3-modal requestModal">
+      <div class="ea3-modal-content requestModalContent">
+        <div class="ea3-modal-header requestHeader">
+          Assign Owner
+          <button
+            class="ea3-closebtn closeIcon"
+            onclick="closeRequestModal()"
+          ></button>
+        </div>
+        <div class="ea3-modal-body requestBody">
+          <div class="requestInputBox">
+            <label for="ownerEmail">secondary owner</label>
+            <input
+              type="email"
+              id="ownerEmail"
+              name="ownerEmail"
+              placeholder="Enter secondary owner name"
+            />
+          </div>
+        </div>
+        <div class="ea3-modal-footer requestFooter">
+          <button class="ow-outlineBtn" onclick="closeRequestModal()">
+            Cancel
+          </button>
+          <button class="ow-primaryBtn" onclick="redirectToEnrollment()">
+            Done
+          </button>
+        </div>
+        <!-- href="../ea3-enrollment/ea3-enrollment.html" -->
+      </div>
+    </div>
+
+  <div id="discardModal" class="ea3-modal requestModal">
+      <div class="ea3-modal-content requestModalContent">
+        <div class="ea3-modal-header discardHeader">
+          Create request for EA3.0
+          <button
+            class="ea3-closebtn closeIcon"
+            onclick="closeDescardModal()"
+          ></button>
+        </div>
+        <div class="ea3-modal-body requestBody">
+          <div class="ea3-warning-alert">
+            <img src="./img/warningIcon.svg" alt="" />
+            <div>
+              <p>Do you want to Discard Create Request?</p>
+              <span
+                >Proceed to EA3.0 Dashboard; changes won't apply to any request.
+                Do you wish to continue?</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="ea3-modal-footer requestFooter">
+          <button class="ow-outlineBtn" onclick="closeRequestModal()">
+            No, Stay here
+          </button>
+          <button class="ow-primaryBtn" onclick="redirectToEnrollment()">
+            Yes, Take me there
+          </button>
+        </div>
+        <!-- href="../ea3-enrollment/ea3-enrollment.html" -->
+      </div>
+    </div>
+    <div
+      id="ow-overlay-container"
+      class="ow-overlay-container"
+      onclick="closeSidebar()"
+    ></div>
+    <div id="ow-overlay" class="ow-overlay"></div>
+  </body>
+  <script src="./js/script.js"></script>
+  <script src="../modal.js"></script>
+</html>

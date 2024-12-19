@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="./ea3-commit-upload.css" />
+
+  <link rel="stylesheet" href="../stepper.css" />
+  <link rel="stylesheet" href="../sidebar.css" />
+  <link rel="stylesheet" href="../cisco-fonts.css" />
+  <link rel="stylesheet" href="../modal.css" />
+  <link rel="stylesheet" href="./drawerstyle.css" />
+</head>
+
+<body>
+  <nav aria-label="ea3-breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="#">Buying Program Dashboard</a>
+      </li>
+      <li class="breadcrumb-item"><a href="#">Create Request</a></li>
+      <li class="breadcrumb-item active" aria-current="page">
+        Request Details
+      </li>
+    </ol>
+  </nav>
+  <!-- -------------- Heading Start ----------------- -->
+  <div class="ea3-request-heading">
+    <div class="ea3-header-left ea3-top-heading">
+      <div>
+        <div class="ea3-header-left-request">
+          <h2>Request ID: <span>35659</span></h2>
+          <img src="./img/edit.svg" alt="" />
+        </div>
+        <div class="ea3-sub-tittle">Epic#35659- EA Firestorm NPI Setups</div>
+      </div>
+      <div class="ea3-owner-user-box">
+        <p>Status</p>
+        <div class="ea3-badge">In Progress</div>
+      </div>
+      <div class="ea3-owner-user-box">
+        <p>Request Owner</p>
+        <div class="ea3-olivia">Olivia</div>
+      </div>
+      <div class="ea3-owner-user-box">
+        <p>Secondary Owner</p>
+        <a href="javascript:void()" class="ea3-olivia-link" onclick="openRequestModal()">Add</a>
+      </div>
+      <div class="ea3-owner-user-box">
+        <p>User Intent</p>
+        <div class="ea3-olivia">New ATO/Billing PID Setup</div>
+      </div>
+    </div>
+    <div class="ea3-btn-group">
+      <a href="" class="ea3-outlineBtn">Back</a>
+      <a href="../ea3-requestID-commit-rules/ea3-requestId-commit-rules.html" class="ea3-primaryBtn">Continue</a>
+    </div>
+  </div>
+  <!-- -------------- Heading End ----------------- -->
+
+  <div class="ea3-main">
+    <div class="ea3-left-content">
+      <!-- ______________ Stepper start ________________  -->
+      <div class="ea3-stepper">
+        <ul class="ea3-step-list">
+          <li class="ea3-steps active">
+            <span class="dot"></span>
+            <span class="lower-text"> Offer Structure </span>
+            <span class="date-text">4 May,2024</span>
+          </li>
+          <li class="ea3-steps active">
+            <span class="dot"></span>
+            <span class="lower-text"> Proposal Construct </span>
+            <span class="date-text">4 May,2024</span>
+          </li>
+          <li class="ea3-steps inprogress">
+            <span class="dot"></span>
+            <span class="lower-text"> Commit Rules </span>
+            <span class="date-text">Please Selected</span>
+          </li>
+
+          <li class="ea3-steps">
+            <span class="dot"></span>
+            <span class="lower-text"> IB Assessment Data </span>
+            <span class="date-text">Not Selected</span>
+          </li>
+
+          <li class="ea3-steps">
+            <span class="dot"></span>
+            <span class="lower-text"> Provisioning & Fulfillment </span>
+            <span class="date-text">Not Selected</span>
+          </li>
+          <li class="ea3-steps">
+            <span class="dot"></span>
+            <span class="lower-text"> Review </span>
+            <span class="date-text">Not Selected</span>
+          </li>
+        </ul>
+      </div>
+      <!-- -------------- Stepper end ----------------- -->
+      <!-- -------------- content Start ----------------- -->
+      <div class="ea3-proposal-contract">
+        <div class="ea3-proposal-contract-header">
+          <h4>Commit Rules Setup</h4>
+        </div>
+        <div class="ea3-contract-button">
+          <button class="ea3-unstyle-btn">
+            <img src="./img/download-icon.svg" alt="" />Download
+          </button>
+          <div class="ea3-btn-divider"></div>
+          <button class="ea3-secondary-outlineBtn-disabled">Preview</button>
+          <button class="ea3-secondary-outlineBtn" onclick="openSidebar()">
+            <img src="./img/plus-icon.svg" alt="" /> Add Rule
+          </button>
+          <button class="ea3-secondary-primary" onclick="openSidebar()">
+            <img src="./img/upload.svg" alt="" /> Upload
+          </button>
+        </div>
+      </div>
+      <div class="ea3-upload-card">
+        <img src="./img/upload-icon.svg" alt="" />
+        <div class="ea3-upload-text">
+          <label>Drag & Drop file here</label>
+          <div class="ea3-upload-where-from">
+            <div class="ea3-browse-divider"></div>
+            <span>Or, upload from system</span>
+            <div class="ea3-browse-divider"></div>
+          </div>
+          <!-- <input type="file" class="ea3-primaryBtn">Browse File</input> -->
+          <div class="ea3-label-group">
+            <label class="browsebtn">
+              Browse File
+              <input type="file" style="display: none" />
+            </label>
+            <!-- <button class="outline-browsebtn">
+              <img src="./img/plus.svg" alt="">
+             Create New
+            </button> -->
+          </div>
+          <a href=""><img src="./img/download-icon.svg" alt="" />Download template
+            with existing data</a>
+        </div>
+      </div>
+      <div class="ea3-commit-rule-contents">
+        <div class="ea3-commit-accordian">
+          <div class="ea3-commit-rule-content">
+            <div class="ea3-content-label">E3-N-WS</div>
+            <div class="ea3-point"></div>
+            <div class="ea3-content-sub-label">IB Commitment</div>
+            <div class="ea3-action-icons">
+              <img src="./img/edit.svg" alt="" />
+              <div class="ea3-point"></div>
+              <img src="./img/delete-icon.svg" alt="" />
+              <div class="ea3-point"></div>
+            </div>
+            <button class="ea3-no-style-btn">
+              <img src="./img/chevron-down.svg" alt="" />
+            </button>
+          </div>
+          <div class="ea3-accordian-item">
+            <div class="ea3-accordian-column">
+              <label for="" class="ea3-acordian-label">Threshold(%) </label>
+              <p class="ea3-value">30%</p>
+            </div>
+            <div class="ea3-accordian-column">
+              <label for="" class="ea3-acordian-label">Exclude Support (Embedded Support)
+              </label>
+              <p class="ea3-value">Yes</p>
+            </div>
+            <div class="ea3-accordian-column">
+              <label for="" class="ea3-acordian-label">Allowed License Classification
+              </label>
+              <p class="ea3-value">Advance</p>
+            </div>
+            <div class="ea3-accordian-column">
+              <label for="" class="ea3-acordian-label">Allowed Product Families
+              </label>
+              <p class="ea3-value">
+                C2960C, C2960CX, C2960L, C2960X, C2960XR, C3560CX, C3650,
+                C3850 <span style="color: #0070d2">+16</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="ea3-commit-accordian">
+          <div class="ea3-commit-rule-content">
+            <div class="ea3-content-label">E3-DUO-PRE-SVS1</div>
+            <div class="ea3-point"></div>
+            <div class="ea3-content-sub-label">
+              TCV Minimum Commitment Threshold(USD)
+            </div>
+            <div class="ea3-action-icons">
+              <img src="./img/edit.svg" alt="" />
+              <div class="ea3-point"></div>
+              <img src="./img/delete-icon.svg" alt="" />
+              <div class="ea3-point"></div>
+            </div>
+            <button class="ea3-no-style-btn">
+              <img src="./img/chevron-down.svg" alt="" />
+            </button>
+          </div>
+          <div class="ea3-accordian-item">
+            <div class="ea3-accordian-column">
+              <label for="" class="ea3-acordian-label">Suite Grouped by (Meters/Measure)</label>
+              <p class="ea3-value">Commit Value (USD)</p>
+            </div>
+            <div class="ea3-accordian-column">
+              <label for="" class="ea3-acordian-label">Allowed License Classification</label>
+              <p class="ea3-value">Advance, Premium</p>
+            </div>
+            <div class="ea3-accordian-column">
+              <label for="" class="ea3-acordian-label">Allowed Product Families
+              </label>
+              <p class="ea3-value">
+                C2960C, C2960CX, C2960L, C2960X, C2960XR, C3560CX, C3650,
+                C3850 <span style="color: #0070d2">+16</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="ea3-commit-accordian">
+          <div class="ea3-commit-rule-content">
+            <div class="ea3-content-label">E3-DUO-ESS-SVS3</div>
+            <div class="ea3-point"></div>
+            <div class="ea3-content-sub-label">Quantity Threshold</div>
+            <div class="ea3-action-icons">
+              <img src="./img/edit.svg" alt="" />
+              <div class="ea3-point"></div>
+              <img src="./img/delete-icon.svg" alt="" />
+              <div class="ea3-point"></div>
+            </div>
+            <button class="ea3-no-style-btn">
+              <img src="./img/chevron-down.svg" alt="" />
+            </button>
+          </div>
+          <div class="ea3-accordian-item">
+            <div class="ea3-accordian-column">
+              <label for="" class="ea3-acordian-label">Suite Grouped by (Meters/Measure)</label>
+              <p class="ea3-value">Commit Value (USD)</p>
+            </div>
+            <div class="ea3-accordian-column">
+              <label for="" class="ea3-acordian-label">Allowed License Classification</label>
+              <p class="ea3-value">Advance, Premium</p>
+            </div>
+            <div class="ea3-accordian-column">
+              <label for="" class="ea3-acordian-label">Allowed Product Families
+              </label>
+              <p class="ea3-value">
+                C2960C, C2960CX, C2960L, C2960X, C2960XR, C3560CX, C3650,
+                C3850 <span style="color: #0070d2">+16</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -------------- Content End ----------------- -->
+    <!-- -------------- Sidebar Start ----------------- -->
+    <div class="ea3-right-content">
+      <div class="ea3-sidebar">
+        <div class="ea3-progress-indicator">
+          <h3>Good start! Keep it moving and make it happen.</h3>
+          <div class="ea3-progress-bar">
+            <div role="donutbar" style="--value: 40; --fg: #fbab2c">
+              <span class="ea3-donutbar-value">40%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ea3-sidebar-card">
+          <label>Discount Central Pricing</label>
+          <p>
+            Make sure you finish Discount Central & Pricing Factors Setup
+            before publishing Data.
+          </p>
+          <button class="ea3-primaryBtn">Make as Done</button>
+        </div>
+        <div class="ea3-divider"></div>
+        <div class="ea3-sidebar-card">
+          <label>EA Factors</label>
+          <p>Make sure you finish EA Factors Setup before publishing Data.</p>
+          <button class="ea3-primaryBtn">Make as Done</button>
+        </div>
+        <!-- <div class="ea3-divider2"></div>
+          <div class="ea3-sidebar-card">
+            <label>Checklist</label>
+            <div class="ea3-radio-list">
+              <ul>
+                <li>
+                  <img src="./img/sidebar-check.svg" alt="">
+                  <span>Offer Structure</span>
+                </li>
+                <li>
+                  <img src="./img/sidebar-check.svg" alt="">
+                  <span>Proposal Construct</span>
+                </li>
+                <li>
+                  <input type="radio" value="3" />
+                  <span>Commit Rules Setup</span>
+                </li>
+                <li>
+                  <input type="radio" value="4" />
+                  <span>IB Assessment Data</span>
+                </li>
+                <li>
+                  <input type="radio" value="5" />
+                  <span>Provisioning & Fulfillment</span>
+                </li>
+              </ul>
+            </div>
+          </div> -->
+        <div class="ea3-publish-data-card">
+          <label>Publish Data to</label>
+          <div class="ea3-publish-list">
+            <img src="./img/close.svg" alt="" />
+            <div class="ea-3-list-title">
+              <p>EAMP</p>
+              <span>Not Selected yet</span>
+            </div>
+          </div>
+          <div class="ea3-divider3"></div>
+          <div class="ea3-publish-list">
+            <img src="./img/close.svg" alt="" />
+            <div class="ea-3-list-title">
+              <p>HANA</p>
+              <span>Not Selected yet</span>
+            </div>
+          </div>
+          <div class="ea3-divider3"></div>
+          <div class="ea3-publish-list">
+            <img src="./img/close.svg" alt="" />
+            <div class="ea-3-list-title">
+              <p>EAWS</p>
+              <span>Not Selected yet</span>
+              <div class="ea3-alert-box">
+                <img src="./img/excelimation-blue-icon.svg" alt="" />
+                <p>
+                  Before publishing to production, make sure you have made
+                  adjustment to EAWS.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -------------- Sidebar End ----------------- -->
+  </div>
+
+  <!-- modal -->
+
+  <div id="requestModal" class="ea3-modal requestModal">
+    <div class="ea3-modal-content requestModalContent">
+      <div class="ea3-modal-header requestHeader">
+        Assign Owner
+        <button class="ea3-closebtn closeIcon" onclick="closeRequestModal()"></button>
+      </div>
+      <div class="ea3-modal-body requestBody">
+        <div class="requestInputBox">
+          <label for="ownerEmail">secondary owner</label>
+          <input type="email" id="ownerEmail" name="ownerEmail" placeholder="Enter secondary owner name" />
+        </div>
+      </div>
+      <div class="ea3-modal-footer requestFooter">
+        <button class="ow-outlineBtn" onclick="closeRequestModal()">
+          Cancel
+        </button>
+        <button class="ow-primaryBtn" onclick="redirectToEnrollment()">
+          Done
+        </button>
+      </div>
+      <!-- href="../ea3-enrollment/ea3-enrollment.html" -->
+    </div>
+  </div>
+
+  <div id="ow-overlay-container" class="ow-overlay-container" onclick="closeSidebar()"></div>
+
+  <!-- --------drawer-satrt------------ -->
+  <div id="ow-overlay-container" class="ow-overlay-container" onclick="closeSidebar()"></div>
+  <div class="offcanvas-sidebar errors-detect-sidebar" id="offcanvas-sidebar">
+    <div class="offcanvas-sidebar-header" id="offcanvas-sidebar-header">
+      Add Rule Type
+    </div>
+    <a href="#" class="closebtn" onclick="closeSidebar()"><img src="./img/close-icon.svg" alt="close-icon" /></a>
+    <!-- Offcanvas  start here -->
+    <div class="offcanvas-sidebar-body">
+      <form>
+        <label class="ea3-form-label" for="">Select ATO</label>
+        <div class="ea3-select">
+          <div class="ea3-form-select">
+            <input class="ea3-form-input" type="text" placeholder="ATO" />
+            <img src="./img/chevron-down.svg" alt="" />
+          </div>
+          <div class="ea3-select-items">
+            <ul>
+              <li class="ea3-select-item">E3-N-WS</li>
+              <li class="ea3-select-item">E3-DUO-PRE-SVS1</li>
+              <li class="ea3-select-item">E3-DUO-ESS-SVS3</li>
+              <li class="ea3-select-item">E3-DUO-PRE-SVS1</li>
+              <li class="ea3-select-item">E3-DUO-ESS-SVS3</li>
+              <li class="ea3-select-item">E3-DUO-PRE-SVS1</li>
+            </ul>
+          </div>
+        </div>
+        <div class="ea3-exclude-support">
+          <label class="ea3-form-label">Choose Exclude Support
+            <div class="ea3-info-icon"></div>
+          </label>
+          <div class="radio-group">
+            <input type="radio" id="yes" name="excludeSupport" />
+            <label for="yes" class="radio-label">
+              <span class="radio-circle"></span> Yes
+            </label>
+            <input type="radio" id="no" name="excludeSupport" />
+            <label for="no" class="radio-label">
+              <span class="radio-circle"></span> No
+            </label>
+          </div>
+        </div>
+        <div class="ea3-commit-rule-type">
+          <label class="ea3-form-label" for="">Choose Commit Rule type</label>
+          <div class="ea3-rule-cards">
+            <div class="ea3-rule-card" data-target="ea3-ib-commitment">
+              <div class="ea3-card-header">
+                <img src="./img/bold-duotone-1.svg" alt="" />
+                <input type="checkbox" class="ea3-form-checkbox" />
+              </div>
+              <div class="ea3-card-content">IB Commitment</div>
+            </div>
+            <div class="ea3-rule-card" data-target="ea3-tvc-minimum-commitment">
+              <div class="ea3-card-header">
+                <img src="./img/bold-duotone-2.svg" alt="" />
+                <input type="checkbox" class="ea3-form-checkbox" />
+              </div>
+              <div class="ea3-card-content">
+                TCV Minimum Commitment Threshold
+              </div>
+            </div>
+            <div class="ea3-rule-card" data-target="ea3-quantity-threshold">
+              <div class="ea3-card-header">
+                <img src="./img/bold-duotone-3.svg" alt="" />
+                <input type="checkbox" class="ea3-form-checkbox" />
+              </div>
+              <div class="ea3-card-content">Quantity Threshold</div>
+            </div>
+          </div>
+
+          <div class="ea3-rule" id="ea3-ib-commitment">
+            <section class="ea3-accordion">
+              <h2 class="handle">
+                <label for="handle1">IB Commitment</label>
+              </h2>
+              <img src="./img/chevron-down.svg" alt="" class="ea3-accordian-icon" />
+            </section>
+            <div class="ea3-section-divider"></div>
+            <div class="ea3-content">
+              <div class="ea3-slider-container">
+                <label for="" class="ea3-form-label">How much percentage do you want to add to the IB Threshold
+                  (%) value?</label>
+                <div class="ea3-slider">
+                  <input type="range" id="ea3-percentageSlider" min="0" max="100" value="0" step="10"
+                    oninput="updateSliderValue(this)" />
+                  <div class="ea3-range">
+                    <ul>
+                      <li><span class="ea3-indicator">0</span></li>
+                      <li><span class="ea3-indicator"></span></li>
+                      <li><span class="ea3-indicator">20</span></li>
+                      <li><span class="ea3-indicator"></span></li>
+                      <li><span class="ea3-indicator">40</span></li>
+                      <li><span class="ea3-indicator"></span></li>
+                      <li><span class="ea3-indicator">60</span></li>
+                      <li><span class="ea3-indicator"></span></li>
+                      <li><span class="ea3-indicator">80</span></li>
+                      <li><span class="ea3-indicator"></span></li>
+                      <li><span class="ea3-indicator">100</span></li>
+                    </ul>
+                  </div>
+                  <div class="ea3-slider-label">
+                    <span id="ea3-sliderValue">0%</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ea3-choose-license-type">
+                <label for="" class="ea3-form-label">Choose License type for IB
+                  <div class="ea3-info-icon"></div>
+                </label>
+
+                <div class="ea3-license-cards">
+                  <div class="ea3-license-card selected" id="card1">
+                    <img src="./img/license-icon.svg" alt="" />
+                    <h4>Advance</h4>
+                  </div>
+                  <div class="ea3-license-card selected" id="card2">
+                    <img src="./img/license-icon.svg" alt="" />
+                    <h4>Premium</h4>
+                  </div>
+                  <div class="ea3-license-card selected" id="card3">
+                    <img src="./img/license-icon.svg" alt="" />
+                    <h4>Basic Support</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="ea3-add-products-families">
+                <label for="" class="ea3-form-label">Add Product Families for IB</label><br />
+                <input type="text" class="ea3-form-select" placeholder="Add Product Families" />
+              </div>
+            </div>
+          </div>
+          <div class="ea3-rule" id="ea3-tvc-minimum-commitment">
+            <section class="ea3-accordion">
+              <h2 class="handle">
+                <label for="handle2">TCV Minimum Commitment Threshold</label>
+              </h2>
+              <img src="./img/chevron-down.svg" alt="" class="ea3-accordian-icon" />
+            </section>
+            <div class="ea3-section-divider"></div>
+            <div class="ea3-content">
+              <div class="ea3-commit-value">
+                <label for="" class="ea3-form-label">Choose Suite Grouping for TCV
+                  <div class="ea3-info-icon"></div>
+                </label>
+                <div class="radio-group">
+                  <input type="radio" id="commita-value" name="excludeSupport" />
+                  <label for="commita-value" class="radio-label">
+                    <span class="radio-circle"></span> Commit Value (USD)
+                  </label>
+                </div>
+              </div>
+              <div class="ea3-slider-container">
+                <label for="" class="ea3-form-label">Add TCV Min Commitment Threshold Value
+                </label>
+                <input type="text" class="ea3-form-select" placeholder="TCV Min Commitment Threshold Value" />
+              </div>
+
+              <div class="ea3-choose-license-type">
+                <label for="" class="ea3-form-label">Choose License type for TCV
+                  <div class="ea3-info-icon"></div>
+                </label>
+                <div class="ea3-license-cards">
+                  <div class="ea3-license-card selected" id="card3">
+                    <img src="./img/license-icon.svg" alt="" />
+                    <h4>Advance</h4>
+                  </div>
+                  <div class="ea3-license-card selected" id="card4">
+                    <img src="./img/license-icon.svg" alt="" />
+                    <h4>Premium</h4>
+                  </div>
+                  <div class="ea3-license-card selected" id="card5">
+                    <img src="./img/license-icon.svg" alt="" />
+                    <h4>Basic Support</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="ea3-add-products-families">
+                <label for="" class="ea3-form-label">Add Product Families for TCV</label>
+                <input type="text" class="ea3-form-select" placeholder="Add Product Families" />
+              </div>
+            </div>
+          </div>
+          <div class="ea3-rule" id="ea3-quantity-threshold">
+            <label for="" class="ea3-form-label">Choose Suite Grouping for Quantity Threshold
+              <div class="ea3-info-icon"></div>
+            </label>
+            <div class="radio-group">
+              <input type="radio" id="user" name="quality-thershold" />
+              <label for="user" class="radio-label">
+                <span class="radio-circle"></span> User
+              </label>
+              <input type="radio" id="session" name="quality-thershold" />
+              <label for="session" class="radio-label">
+                <span class="radio-circle"></span> Sessions
+              </label>
+              <input type="radio" id="workloads" name="quality-thershold" />
+              <label for="workloads" class="radio-label">
+                <span class="radio-circle"></span> Workloads
+              </label>
+              <input type="radio" id="flows" name="quality-thershold" />
+              <label for="flows" class="radio-label">
+                <span class="radio-circle"></span> Flows
+              </label>
+            </div>
+            <div class="ea3-quantity-calculator-section" style="display: none">
+              <div class="ea3-label-section">
+                <label for="" class="ea3-form-label">Set up Commit Quantity Calculation formula</label>
+                <div class="ea3-dynamic-toggle d-none">
+                  <div class="ow-toggle-content">
+                    <label class="switch">
+                      <input type="checkbox" class="toggle" onchange="toggleDynamicNode()" />
+                      <span class="slider round"></span>
+                    </label>
+                    <span>Add Dynamic Multiplier</span>
+                  </div>
+                  <img src="./img/delete-icon.svg" alt="" />
+                </div>
+              </div>
+              <div class="container">
+                <div class="flow">
+                  <!-- Sum Operator -->
+                  <div class="node op-main">
+                    <div class="dot-connector dot-right"></div>
+                    <div style="display: flex; gap: 6px">
+                      <div class="ea3-node-icon">
+                        <img src="./img/circle-dot.svg" alt="" />
+                      </div>
+                      <div>
+                        <div class="label">Operator</div>
+                        <div class="value">Sum</div>
+                      </div>
+                    </div>
+                    <div class="edit-icon">
+                      <img src="./img/edit.svg" alt="" />
+                    </div>
+                  </div>
+
+                  <!-- SKU Group -->
+                  <div class="sku-group">
+                    <div class="dropdown">
+                      <button type="button" class="connect-btn">+</button>
+                      <div class="dropdown-content">
+                        <a href="#">Sum</a>
+                        <a href="#">Max</a>
+                      </div>
+                    </div>
+                    <div class="sku-group-list d-none">
+                      <div class="node op-selected op-selected-right">
+                        <div class="dot-connector"></div>
+                        <div class="dot-connector dot-right"></div>
+                        <div class="left-connector"></div>
+                        <div class="right-connector"></div>
+                        <div class="vr-selected vr-left"></div>
+                        <div class="vr-selected vr-right"></div>
+                        <div style="display: flex; gap: 6px">
+                          <div class="ea3-node-icon">
+                            <img src="./img/brick-icon.svg" alt="" />
+                          </div>
+                          <div>
+                            <div class="label">SKU</div>
+                            <div class="value">E3-DUO-ESS-SVS3</div>
+                          </div>
+                        </div>
+                        <div class="edit-icon">
+                          <img src="./img/edit.svg" alt="" />
+                        </div>
+                      </div>
+
+                      <div class="node op-selected op-selected-right">
+                        <div class="dot-connector"></div>
+                        <div class="dot-connector dot-right"></div>
+                        <div class="right-connector"></div>
+                        <div class="left-connector"></div>
+                        <div class="vr-selected vr-left"></div>
+                        <div class="vr-selected vr-right"></div>
+                        <div style="display: flex; gap: 6px">
+                          <div class="ea3-node-icon">
+                            <img src="./img/brick-icon.svg" alt="" />
+                          </div>
+                          <div>
+                            <div class="label">SKU</div>
+                            <div class="value">E3-DUO-PRE-SVS1</div>
+                          </div>
+                        </div>
+                        <div class="edit-icon">
+                          <img src="./img/edit.svg" alt="" />
+                        </div>
+                      </div>
+
+                      <div class="node op-selected op-selected-right">
+                        <div class="dot-connector"></div>
+                        <div class="dot-connector dot-right"></div>
+                        <div class="right-connector"></div>
+                        <div class="left-connector"></div>
+                        <div class="vr-selected vr-left"></div>
+
+                        <div style="display: flex; gap: 6px">
+                          <div class="ea3-node-icon">
+                            <img src="./img/brick-icon.svg" alt="" />
+                          </div>
+                          <div>
+                            <div class="label">SKU</div>
+                            <div class="value">E3-DUO-ESS-SVS2</div>
+                          </div>
+                        </div>
+                        <div class="edit-icon">
+                          <img src="./img/edit.svg" alt="" />
+                        </div>
+                      </div>
+
+                      <div class="node op-selected notseleted">
+                        <div class="dot-connector"></div>
+
+                        <div class="left-connector"></div>
+                        <div style="display: flex; gap: 6px">
+                          <div class="ea3-node-icon">
+                            <img src="./img/brick-icon.svg" alt="" />
+                          </div>
+                          <div>
+                            <div class="label">SKU</div>
+                            <div class="value">Select</div>
+                          </div>
+                        </div>
+                        <div class="edit-icon">
+                          <img src="./img/edit.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="node op-selected op-select-option d-none">
+                      <div class="dot-connector"></div>
+                      <div class="dot-connector dot-right"></div>
+                      <div class="left-connector"></div>
+
+                      <div style="display: flex; gap: 6px">
+                        <div class="ea3-node-icon">
+                          <img src="./img/brick-icon.svg" alt="" />
+                        </div>
+                        <div>
+                          <div class="label">SKU</div>
+                          <div class="value">Select</div>
+                        </div>
+                      </div>
+                      <div class="edit-icon">
+                        <img src="./img/edit.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Multiply Operation -->
+                  <div class="multiply-connector">
+                    <div class="dropdown d-none">
+                      <button type="button" class="connect-btn">+</button>
+                      <div class="dropdown-content">
+                        <div class="ea3-select-items">
+                          <div class="ea3-form-select">
+                            <img src="./img/search.svg" alt="" />
+                            <input class="ea3-form-input" type="text" placeholder="Search SKU" />
+                          </div>
+                          <ul>
+                            <a href="#" class="ea3-select-list">
+                              <li class="ea3-select-item">
+                                <input type="checkbox" />E3-DUO-ESS-SVS3
+                              </li>
+                            </a>
+                            <a href="#" class="ea3-select-list">
+                              <li class="ea3-select-item">
+                                <input type="checkbox" />E3-DUO-PRE-SVS1
+                              </li>
+                            </a>
+                            <a href="#" class="ea3-select-list">
+                              <li class="ea3-select-item">
+                                <input type="checkbox" />E3-DUO-ESS-SVS3
+                              </li>
+                            </a>
+                            <a href="#" class="ea3-select-list">
+                              <li class="ea3-select-item">
+                                <input type="checkbox" />E3-DUO-PRE-SVS1
+                              </li>
+                            </a>
+                            <a href="#" class="ea3-select-list">
+                              <li class="ea3-select-item">
+                                <input type="checkbox" />E3-N-WS
+                              </li>
+                            </a>
+                            <a href="#" class="ea3-select-list">
+                              <li class="ea3-select-item">
+                                <input type="checkbox" />E3-DUO-PRE-SVS1
+                              </li>
+                            </a>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="multiply-connector-list d-none">
+
+                      <div class="node selectValue">
+                        <div class="dot-connector"></div>
+                        <div class="dot-connector dot-right"></div>
+                        <div style="display: flex; gap: 6px">
+                          <div class="ea3-node-icon">
+                            <img src="./img/close-icon.svg" alt="" />
+                          </div>
+                          <div>
+                            <div class="label">Operation</div>
+                            <div class="value">Select</div>
+                          </div>
+                        </div>
+                        <div class="edit-icon">
+                          <img src="./img/edit.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="node selectedValue d-none">
+                        <div class="dot-connector"></div>
+                        <div class="dot-connector dot-right"></div>
+                        <div style="display: flex; gap: 6px">
+                          <div class="ea3-node-icon">
+                            <img src="./img/close-icon.svg" alt="" />
+                          </div>
+                          <div>
+                            <div class="label">Operation</div>
+                            <div class="value">Multiply</div>
+                          </div>
+                        </div>
+                        <div class="edit-icon">
+                          <img src="./img/edit.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="integer-group">
+                    <div class="dropdown d-none">
+                      <button type="button" class="connect-btn">+</button>
+                      <div class="dropdown-content">
+                        <a href="#" style="width: auto">+</a>
+                        <a href="#" style="width: auto">-</a>
+                        <a href="#" style="width: auto">*</a>
+                        <a href="#" style="width: auto">%</a>
+                      </div>
+                    </div>
+
+
+
+
+
+                    <div class="integer-group-list selectValue d-none">
+                      <div class="node op-selected">
+                        <div class="dot-connector"></div>
+                        <div class="dot-connector dot-right"></div>
+                        <div class="left-connector"></div>
+                        <div class="vr-selected vr-left"></div>
+                        <div style="display: flex; gap: 6px">
+                          <div class="ea3-node-icon">
+                            <img src="./img/check-icon.svg" alt="" />
+                          </div>
+                          <div>
+                            <div class="label">Integer</div>
+                            <div class="value">0.33</div>
+                          </div>
+                        </div>
+                        <div class="edit-icon">
+                          <img src="./img/edit.svg" alt="" />
+                        </div>
+                      </div>
+
+                      <div class="node op-selected">
+                        <div class="dot-connector"></div>
+                        <div class="left-connector"></div>
+                        <div class="vr-selected vr-left"></div>
+
+                        <div style="display: flex; gap: 6px">
+                          <div class="ea3-node-icon">
+                            <img src="./img/check-icon.svg" alt="" />
+                          </div>
+                          <div>
+                            <div class="label">Integer</div>
+                            <div class="value">1</div>
+                          </div>
+                        </div>
+                        <div class="edit-icon">
+                          <img src="./img/edit.svg" alt="" />
+                        </div>
+                      </div>
+
+                      <div class="node op-selected">
+                        <div class="dot-connector"></div>
+                        <div class="left-connector"></div>
+                        <div style="display: flex; gap: 6px">
+                          <div class="ea3-node-icon">
+                            <img src="./img/check-icon.svg" alt="" />
+                          </div>
+                          <div>
+                            <div class="label">Integer</div>
+                            <div class="value">1</div>
+                          </div>
+                        </div>
+                        <div class="edit-icon">
+                          <img src="./img/edit.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+
+
+
+                  <!-- Multiply Operation dynamic-1 -->
+                  <div class="dynamic-connector-1">
+                    <div class="dynamic-connector-list-1">
+                      <div class="node op-selected selectValue">
+                        <div class="left-connector"></div>
+                        <div class="dot-connector"></div>
+                        <div class="dot-connector dot-right"></div>
+                        <div style="display: flex; gap: 6px">
+                          <div class="ea3-node-icon">
+                            <img src="./img/close-icon.svg" alt="" />
+                          </div>
+                          <div class="selectedValuie">
+                            <div class="label">Operation</div>
+                            <div class="value">Select</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="node op-selected selectedValue d-none">
+                        <div class="left-connector"></div>
+                        <div class="dot-connector"></div>
+                        <div class="dot-connector dot-right"></div>
+                        <div style="display: flex; gap: 6px">
+                          <div class="ea3-node-icon">
+                            <img src="./img/close-icon.svg" alt="" />
+                          </div>
+                          <div class="selectedValuie">
+                            <div class="label">Operation</div>
+                            <div class="value">Multiply</div>
+                          </div>
+                        </div>
+                        <div class="edit-icon">
+                          <img src="./img/edit.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dynamic-connector-2">
+                    <div class="dropdown">
+                      <button type="button" class="connect-btn">+</button>
+                      <div class="dropdown-content">
+                        <a href="#" style="width: auto">+</a>
+                        <a href="#" style="width: auto">-</a>
+                        <a href="#" style="width: auto">*</a>
+                        <a href="#" style="width: auto">%</a>
+                      </div>
+                    </div>
+                    <div class="dynamic-connector-list-2">
+                      <div class="node op-selected selectValue d-none">
+                        <div class="left-connector"></div>
+                        <div class="dot-connector"></div>
+                        <div class="dot-connector dot-right"></div>
+                        <div style="display: flex; gap: 6px">
+                          <div class="ea3-node-icon">
+                            <img src="./img/close-icon.svg" alt="" />
+                          </div>
+                          <div class="selectedValuie">
+                            <div class="label">Operation</div>
+                            <div class="value">Dynamic Multiplier</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="node op-selected selectedValue d-none">
+                        <div class="left-connector"></div>
+                        <div class="dot-connector"></div>
+                        <div class="dot-connector dot-right"></div>
+                        <div style="display: flex; gap: 6px">
+                          <div class="ea3-node-icon">
+                            <img src="./img/close-icon.svg" alt="" />
+                          </div>
+                          <div class="selectedValuie">
+                            <div class="label">Operation</div>
+                            <div class="value">MinSkuTierRangeMultiplier</div>
+                          </div>
+                        </div>
+                        <div class="edit-icon">
+                          <img src="./img/edit.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="dynamic-connector-3 d-none">
+                    <div class="dropdown">
+                      <button type="button" class="connect-btn">+</button>
+                      <div class="dropdown-content">
+                        <a href="#" style="width: auto">MinSkuTierRangeMultiplier</a>
+                        <a href="#" style="width: auto">MinSkuTierRangeMultiplier</a>
+                      </div>
+                    </div>
+
+                    <div class="node op-selected selectValue d-none">
+                      <div class="left-connector"></div>
+                      <div class="dot-connector"></div>
+                      <div class="dot-connector dot-right"></div>
+                      <div style="display: flex; gap: 6px">
+                        <div class="ea3-node-icon">
+                          <img src="./img/close-icon.svg" alt="" />
+                        </div>
+                        <div class="selectedValuie">
+                          <div class="label">Value</div>
+                          <div class="value">Select</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dynamic-connector-list-3 d-none">
+                      <div class="node op-selected">
+                        <div class="left-connector"></div>
+                        <div class="dot-connector"></div>
+
+                        <div class="left-connector"></div>
+                        <div class="vr-selected vr-left"></div>
+                        <div style="display: flex; gap: 6px">
+                          <div class="ea3-node-icon">
+                            <img src="./img/close-icon.svg" alt="" />
+                          </div>
+                          <div>
+                            <div class="label">Value</div>
+                            <div class="value">True</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="node op-selected">
+                        <div class="dot-connector"></div>
+                        <div class="left-connector"></div>
+                        <div class="vr-selected vr-left"></div>
+
+                        <div style="display: flex; gap: 6px">
+                          <div class="ea3-node-icon">
+                            <img src="./img/close-icon.svg" alt="" />
+                          </div>
+                          <div>
+                            <div class="label">Value</div>
+                            <div class="value">False</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="node op-selected">
+                        <div class="dot-connector"></div>
+                        <div class="left-connector"></div>
+                        <div style="display: flex; gap: 6px">
+                          <div class="ea3-node-icon">
+                            <img src="./img/close-icon.svg" alt="" />
+                          </div>
+                          <div>
+                            <div class="label">Value</div>
+                            <div class="value">True</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="dynamic-connector-4 d-none">
+                    <div class="dropdown">
+                      <button type="button" class="connect-btn">+</button>
+                      <div class="dropdown-content">
+                        <a href="#" style="width: auto">True</a>
+                        <a href="#" style="width: auto">False</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="off-canvas-footer" id="off-canvas-footer">
+      <button class="ea-btn-secondary" onclick="closeSidebar()">Close</button>
+      <button class="ea-btn-medium" onclick="closeSidebar()">Add</button>
+    </div>
+    <!-- ----------------------preview-drawer------------------------- -->
+  </div>
+  <div class="ea3-preview-drawer">
+    <div class="offcanvas-sidebar-header" id="offcanvas-sidebar-header">
+      Preview
+      <a href="#" class="closebtn" onclick="previewDrawerClose()"><img src="./img/close-icon.svg"
+          alt="close-icon" /></a>
+    </div>
+
+    <div class="offcanvas-sidebar-body">
+      <div class="ea3-preview-drawer-container">
+        <h4>Commit Quantity Calculation formula</h4>
+        <ul>
+          <li class="preview-list">
+            <div style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  flex: 1;
+                ">
+              <div class="ea3-list-label">E3-DUO-ESS-SVS3</div>
+              <div class="ea3-preview-divider"></div>
+              <div class="formula-icon">
+                <img src="./img/multiply-icon.svg" alt="" />
+              </div>
+              <div class="ea3-preview-divider"></div>
+              <div class="ea3-list-sub-label">0.33</div>
+            </div>
+            <div class="ea3-multiplier">
+              <div class="formula-icon">
+                <img src="./img/multiply-icon.svg" alt="" />
+              </div>
+              MinSkuTierRangeMultiplier
+            </div>
+          </li>
+          <li class="preview-list">
+            <div style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  flex: 1;
+                ">
+              <div class="ea3-list-label">E3-DUO-PRE-SVS1</div>
+              <div class="ea3-preview-divider"></div>
+              <div class="formula-icon">
+                <img src="./img/multiply-icon.svg" alt="" />
+              </div>
+              <div class="ea3-preview-divider"></div>
+              <div class="ea3-list-sub-label">1.00</div>
+            </div>
+            <div class="ea3-multiplier">
+              <div class="formula-icon">
+                <img src="./img/multiply-icon.svg" alt="" />
+              </div>
+              MinSkuTierRangeMultiplier
+            </div>
+          </li>
+          <li class="preview-list">
+            <div style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  flex: 1;
+                ">
+              <div class="ea3-list-label">E3-DUO-ESS-SVS2</div>
+              <div class="ea3-preview-divider"></div>
+              <div class="formula-icon">
+                <img src="./img/multiply-icon.svg" alt="" />
+              </div>
+              <div class="ea3-preview-divider"></div>
+              <div class="ea3-list-sub-label">1.00</div>
+            </div>
+            <div class="ea3-multiplier">
+              <div class="formula-icon">
+                <img src="./img/multiply-icon.svg" alt="" />
+              </div>
+              MinSkuTierRangeMultiplier
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- -------------drawer-end------ -->
+
+  <div id="ow-overlay" class="ow-overlay"></div>
+</body>
+<script src="../modal.js"></script>
+<script src="./ea3-requestId-commit-rules.js"></script>
+
+</html>

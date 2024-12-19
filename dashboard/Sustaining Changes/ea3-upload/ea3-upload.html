@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="../stepper.css" />
+    <link rel="stylesheet" href="../sidebar.css" />
+    <link rel="stylesheet" href="../cisco-fonts.css" />
+    <link rel="stylesheet" href="../modal.css" />
+  </head>
+  <style></style>
+  <body>
+    <nav aria-label="ea3-breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Buying Program Dashboard</a>
+        </li>
+        <li class="breadcrumb-item"><a href="#">Create Request</a></li>
+        <li class="breadcrumb-item active" aria-current="page">
+          Request Details
+        </li>
+      </ol>
+    </nav>
+    <!-- -------------- Heading Start ----------------- -->
+    <!-- <div class="ea3-request-heading">
+      <div class="ea3-top-heading">
+        <h2>Request ID:<span>35659</span></h2>
+        <img src="./img/edit-icon.svg" alt="" />
+        <div class="ea3-badge">In Progress</div> -->
+    <div class="ea3-request-heading">
+      <div class="ea3-header-left ea3-top-heading">
+        <div>
+          <div class="ea3-header-left-request">
+            <h2>Request ID: <span>35659</span></h2>
+            <img src="./img/edit.svg" alt="" />
+          </div>
+          <div class="ea3-sub-tittle">Epic#35659- EA Firestorm NPI Setups</div>
+        </div>
+        <div class="ea3-owner-user-box">
+          <p>Status</p>
+          <div class="ea3-badge">In Progress</div>
+        </div>
+        <div class="ea3-owner-user-box">
+          <p>Request Owner</p>
+          <div class="ea3-olivia">Olivia</div>
+        </div>
+        <div class="ea3-owner-user-box">
+          <p>Request Owner</p>
+          <a
+          href="javascript:void()"
+          class="ea3-olivia-link"
+          onclick="openRequestModal()"
+          >Add</a
+        >
+        </div>
+        <div class="ea3-owner-user-box">
+          <p>User Intent</p>
+          <div class="ea3-olivia">Sustaining Changes</div>
+        </div>
+      </div>
+      <div class="ea3-btn-group">
+        <a href="../ea3-requestID/ea3-requestID.html" class="ea3-outlineBtn"
+          >Back</a
+        >
+        <a href="../ea3-error-page/ea3-error-page.html" class="ea3-primaryBtn"
+          >Continue</a
+        >
+      </div>
+    </div>
+    <!-- -------------- Heading End ----------------- -->
+
+    <div class="ea3-main">
+      <div class="ea3-left-content">
+        <!-- ______________ Stepper start ________________  -->
+        <div class="ea3-stepper">
+          <ul class="ea3-step-list">
+            <li class="ea3-steps completed">
+              <span class="dot"></span>
+              <span class="lower-text"> Offer Structure </span>
+              <span class="date-text">May 4,2024</span>
+            </li>
+            <li class="ea3-steps completed">
+              <span class="dot"></span>
+              <span class="lower-text"> Proposal Construct </span>
+              <span class="date-text">Not Selected</span>
+            </li>
+            <li class="ea3-steps completed">
+              <span class="dot"></span>
+              <span class="lower-text"> Commit Rules </span>
+              <span class="date-text">Not Selected</span>
+            </li>
+
+            <li class="ea3-steps completed">
+              <span class="dot"></span>
+              <span class="lower-text"> IB Assessment Data </span>
+              <span class="date-text">Not Selected</span>
+            </li>
+
+            <li class="ea3-steps completed">
+              <span class="dot"></span>
+              <span class="lower-text"> Provisioning & Fulfillment </span>
+              <span class="date-text">Not Selected</span>
+            </li>
+            <li class="ea3-steps completed">
+              <span class="dot"></span>
+              <span class="lower-text"> Review </span>
+              <span class="date-text">Not Selected</span>
+            </li>
+          </ul>
+        </div>
+        <!-- -------------- Stepper end ----------------- -->
+        <!-- -------------- content Start ----------------- -->
+        <div class="ea3-proposal-contract">
+          <div class="ea3-proposal-contract-header">
+            <h4>Proposal Construct Setup</h4>
+            <p>Define Attributes for your AW/CX ATOs & Billing SKUs</p>
+          </div>
+          <div class="ea3-contract-button">
+            <button class="ea3-secondary-outlineBtn">Preview</button>
+          </div>
+        </div>
+        <div class="ea3-upload-card">
+          <img src="./img/upload-icon.svg" alt="" />
+          <div class="ea3-upload-text">
+            <label>Drag & Drop file here</label>
+            <div class="ea3-upload-where-from">
+              <div class="ea3-browse-divider"></div>
+              <span>Or, upload from system</span>
+              <div class="ea3-browse-divider"></div>
+            </div>
+            <!-- <input type="file" class="ea3-primaryBtn">Browse File</input> -->
+            <label class="browsebtn">
+              Browse File
+              <input type="file" style="display: none" />
+            </label>
+            <a href=""
+              ><img src="./img/download-icon.svg" alt="" />Download template
+              with existing data</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- -------------- Content End ----------------- -->
+      <!-- -------------- Sidebar Start ----------------- -->
+      <div class="ea3-right-content">
+        <div class="ea3-sidebar">
+          <div class="ea3-progress-indicator">
+            <h3>Good start! Keep it moving and make it happen.</h3>
+            <div class="ea3-progress-bar">
+              <div role="donutbar" style="--value: 100; --fg: #74bf4b">
+                <span class="ea3-donutbar-value">100%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ea3-sidebar-card">
+            <label>Discount Central Pricing</label>
+            <p>
+              Make sure you finish Discount Central & Pricing Factors Setup
+              before publishing Data.
+            </p>
+            <button class="ea3-completedBtn">Completed</button>
+          </div>
+          <div class="ea3-divider"></div>
+          <div class="ea3-sidebar-card">
+            <label>EA Factors</label>
+            <p>Make sure you finish EA Factors Setup before publishing Data.</p>
+            <button class="ea3-completedBtn">Completed</button>
+          </div>
+          <div class="ea3-divider2"></div>
+          <!-- <div class="ea3-sidebar-card">
+            <label>Checklist</label>
+            <div class="ea3-radio-list">
+              <ul>
+                <li>
+                  <input type="radio" value="1" />
+                  <span>Offer Structure</span>
+                </li>
+                <li>
+                  <input type="radio" value="2" />
+                  <span>Proposal Construct</span>
+                </li>
+                <li>
+                  <input type="radio" value="3" />
+                  <span>Commit Rules Setup</span>
+                </li>
+                <li>
+                  <input type="radio" value="4" />
+                  <span>IB Assessment Data</span>
+                </li>
+                <li>
+                  <input type="radio" value="5" />
+                  <span>Provisioning & Fulfillment</span>
+                </li>
+              </ul>
+            </div>
+          </div> -->
+          <div class="ea3-publish-data-card">
+            <label>Publish Data to</label>
+            <div class="ea3-publish-list">
+              <img src="./img/Rightcheck.svg" alt="" />
+              <div class="ea-3-list-title">
+                <p>EAMP</p>
+                <span>Not Selected yet</span>
+              </div>
+            </div>
+            <div class="ea3-divider3"></div>
+            <div class="ea3-publish-list">
+              <img src="./img/Rightcheck.svg" alt="" />
+              <div class="ea-3-list-title">
+                <p>HANA</p>
+                <span>Not Selected yet</span>
+              </div>
+            </div>
+            <div class="ea3-divider3"></div>
+            <div class="ea3-publish-list">
+              <img src="./img/Rightcheck.svg" alt="" />
+              <div class="ea-3-list-title">
+                <p>EAWS</p>
+                <span>Not Selected yet</span>
+                <div class="ea3-alert-box">
+                  <img src="./img/excelimation-blue-icon.svg" alt="" />
+                  <p>
+                    Before publishing to production, make sure you have made
+                    adjustment to EAWS.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- -------------- Sidebar End ----------------- -->
+    </div>
+    <!-- modal -->
+    <div id="requestModal" class="ea3-modal requestModal">
+      <div class="ea3-modal-content requestModalContent">
+        <div class="ea3-modal-header requestHeader">
+          Assign Owner
+          <button
+            class="ea3-closebtn closeIcon"
+            onclick="closeRequestModal()"
+          ></button>
+        </div>
+        <div class="ea3-modal-body requestBody">
+          <div class="requestInputBox">
+            <label for="ownerEmail">secondary owner</label>
+            <input
+              type="email"
+              id="ownerEmail"
+              name="ownerEmail"
+              placeholder="Enter secondary owner name"
+            />
+          </div>
+        </div>
+        <div class="ea3-modal-footer requestFooter">
+          <button class="ow-outlineBtn" onclick="closeRequestModal()">
+            Cancel
+          </button>
+          <button class="ow-primaryBtn" onclick="redirectToEnrollment()">
+            Done
+          </button>
+        </div>
+        <!-- href="../ea3-enrollment/ea3-enrollment.html" -->
+      </div>
+    </div>
+    <div
+      id="ow-overlay-container"
+      class="ow-overlay-container"
+      onclick="closeSidebar()"
+    ></div>
+    <div id="ow-overlay" class="ow-overlay"></div>
+  </body>
+  <script src="../modal.js"></script>
+</html>

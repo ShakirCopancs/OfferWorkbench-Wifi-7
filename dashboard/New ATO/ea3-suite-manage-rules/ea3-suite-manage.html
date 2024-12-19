@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ea3-migration-upgrade-mapping</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="../cisco-fonts.css" />
+    <link rel="stylesheet" href="../stepper.css" />
+    <link rel="stylesheet" href="../modal.css" />
+  </head>
+  <body>
+    <nav aria-label="ea3-breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Buying Program Dashboard</a>
+        </li>
+        <li class="breadcrumb-item"><a href="#">EA 3.0</a></li>
+        <li class="breadcrumb-item active" aria-current="page">
+          Suite Blocking Rules
+        </li>
+      </ol>
+    </nav>
+    <div class="ea3-migration-container">
+      <div class="ea3-migration-header">
+        <h2>Suite Manage Rules</h2>
+        <div class="ea3-migration-button-group">
+          <a
+            href="../ea3-licensing&finance/ea3-licensing&finance.html"
+            class="ea3-back"
+            >Back</a
+          >
+          <a href="javascript:void(0);" class="ea3-publish-production"
+            >Publish to Production</a
+          >
+        </div>
+      </div>
+
+      <!-- error check bar start here -->
+      <div class="ea3-alert1 alert-primary">
+        <img src="./img/error-check.svg" alt="" />
+        <p>
+          Amet minim mollit ullamco non deserunt est sit aliqua dolor do amet
+          sint duis enim.
+        </p>
+      </div>
+      <!-- error check bar end here -->
+
+      <!-- main table component start here -->
+      <div class="ea3-upgrade-content">Manage Suite Rules</div>
+      <div class="ea3-table-searchbar">
+        <div class="ea3-searchContent">
+          <div class="ea3-searchbar">
+            <select name="number" id="number" class="ea3-dropdown">
+              <option value="volvo">Suits</option>
+              <option value="saab">Source</option>
+            </select>
+            <div class="ea3-search">
+              <img src="./img/search.svg" alt="Add" />
+              <input placeholder="Search by Source ATOs" />
+            </div>
+          </div>
+          <button class="ea3-filterBar">
+            <img src="./img/filter.svg" />
+            <span>Filters</span>
+          </button>
+        </div>
+        <div class="ea3-table-searchbar-button-group">
+          <div class="ea3-enrollment-group">
+            <img src="./img/clone-filled.svg" alt="" />
+            <span class="ea3-enrollment-title">Enrollments</span>
+          </div>
+          <div class="ea3-enrollment-group">
+            <img src="./img/Add-Ons.svg" alt="" />
+            <span class="ea3-enrollment-title">Pools</span>
+          </div>
+          <div class="ea3-enrollment-group">
+            <img src="./img/optionAccordion.svg" alt="" />
+            <span class="ea3-enrollment-title">Suites</span>
+          </div>
+          <button class="ea3-mappings" onclick="openRequestModal()">
+            <span class="ea3-btn-icon"><img src="./img/resetIcon.svg" /></span
+            >Download Existing Data
+          </button>
+          <div class="ea3-boder-12"></div>
+          <button class="ea3-mappings">
+            <span class="ea3-btn-icon"><img src="./img/resetIcon.svg" /></span
+            >Reset
+          </button>
+          <div class="ea3-boder-12"></div>
+          <button class="ea3-back">
+            <span class="ea3-btn-icon"><img src="" /></span>Save & Publish
+          </button>
+          <div class="ea3-boder-12"></div>
+          <button class="ea3-publish-production">
+            <span class="ea3-btn-icon"
+              ><img src="./img/validate-true.svg" /></span
+            >Validate Proposal Construct
+          </button>
+        </div>
+      </div>
+      <div class="ea3-suite-grid-content">
+        <div class="ea3-accordian-column">
+          <h3 class="ea3-accordian-column-heading">Suites Default Opt-in</h3>
+          <div class="ow-heading-content" id="ow-heading-content">
+            <h5>Enrollment Suite(s)</h5>
+            <div class="ow-toggle-content">
+              <span>Default Suite opt-in</span>
+            </div>
+          </div>
+          <div class="sidebar-auto-scroll" id="sidebar-auto-scroll">
+            <div class="ow-accordion-content">
+              <div class="accordion">
+                <button class="accordion-button">
+                  <div class="ea3-accordion-button-title">
+                    <div class="ea3-plus-icon">
+                      <img src="./img/add-outline.svg" alt="" />
+                    </div>
+                    <div class="ea3-minus-icon">
+                      <img src="./img/minus-icon.svg" alt="" />
+                    </div>
+                    <img src="./img/clone-filled.svg" alt="" />
+                    <p>Security (4 Pools)</p>
+                  </div>
+                  <input type="checkbox" name="selection" value="item1" />
+                </button>
+                <div class="accordion-content">
+                  <div class="accordion-button">
+                    <div class="ea3-accordion-button-title">
+                      <div class="ea3-plus-icon">
+                        <img src="./img/add-outline.svg" alt="" />
+                      </div>
+                      <div class="ea3-minus-icon">
+                        <img src="./img/minus-icon.svg" alt="" />
+                      </div>
+                      <img src="./img/Add-Ons.svg" alt="" />
+                      <p>Add-on Products (4 Suites)</p>
+                    </div>
+                    <input type="checkbox" name="selection" value="item1" />
+                  </div>
+                  <div class="accordion-content">
+                    <div class="ow-accordion-items">
+                      <div class="ow-ato-list">
+                        <div class="ea3-accordion-button-title">
+                          <img src="./img/optionAccordion.svg" alt="" />
+                          <p>Cisco Secure Access</p>
+                        </div>
+                        <input type="checkbox" name="selection" value="item1" />
+                      </div>
+                      <div class="ow-ato-list">
+                        <div class="ea3-accordion-button-title">
+                          <img src="./img/optionAccordion.svg" alt="" />
+                          <p>Umbrella</p>
+                        </div>
+                        <input type="checkbox" name="selection" value="item1" />
+                      </div>
+                      <div class="ow-ato-list">
+                        <div class="ea3-accordion-button-title">
+                          <img src="./img/optionAccordion.svg" alt="" />
+                          <p>Secure Firewall</p>
+                        </div>
+                        <input type="checkbox" name="selection" value="item1" />
+                      </div>
+                      <div class="ow-ato-list">
+                        <div class="ea3-accordion-button-title">
+                          <img src="./img/optionAccordion.svg" alt="" />
+                          <p>Secure Web</p>
+                        </div>
+                        <input type="checkbox" name="selection" value="item1" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-button">
+                    <div class="ea3-accordion-button-title">
+                      <img src="./img/add-outline.svg" alt="" />
+                      <img src="./img/Add-Ons.svg" alt="" />
+                      <p>Cloud Networking Security (4 Suites)</p>
+                    </div>
+                    <input type="checkbox" name="selection" value="item1" />
+                  </div>
+                  <div class="accordion-content">
+                    <span class="accordion-content">content</span>
+                  </div>
+                  <div class="accordion-button">
+                    <div class="ea3-accordion-button-title">
+                      <img src="./img/add-outline.svg" alt="" />
+                      <img src="./img/Add-Ons.svg" alt="" />
+                      <p>Protection (4 Suites)</p>
+                    </div>
+                    <input type="checkbox" name="selection" value="item1" />
+                  </div>
+                  <div class="accordion-content">
+                    <span class="accordion-content">content</span>
+                  </div>
+                  <div class="accordion-button">
+                    <div class="ea3-accordion-button-title">
+                      <img src="./img/add-outline.svg" alt="" />
+                      <img src="./img/Add-Ons.svg" alt="" />
+                      <p>Zero Trust (4 Suites)</p>
+                    </div>
+                    <input type="checkbox" name="selection" value="item1" />
+                  </div>
+                  <div class="accordion-content">
+                    <span class="accordion-content">content</span>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion">
+                <button class="accordion-button">
+                  <div class="ea3-accordion-button-title">
+                    <div class="ea3-plus-icon">
+                      <img src="./img/add-outline.svg" alt="" />
+                    </div>
+                    <div class="ea3-minus-icon">
+                      <img src="./img/minus-icon.svg" alt="" />
+                    </div>
+                    <img src="./img/clone-filled.svg" alt="" />
+                    <p>Networking Infrastructure (4 Pools)</p>
+                  </div>
+                  <input type="checkbox" name="selection" value="item1" />
+                </button>
+                <div class="accordion-content">
+                  <p>Content for section 1...</p>
+                </div>
+              </div>
+              <div class="accordion">
+                <button class="accordion-button">
+                  <div class="ea3-accordion-button-title">
+                    <div class="ea3-plus-icon">
+                      <img src="./img/add-outline.svg" alt="" />
+                    </div>
+                    <div class="ea3-minus-icon">
+                      <img src="./img/minus-icon.svg" alt="" />
+                    </div>
+                    <img src="./img/clone-filled.svg" alt="" />
+                    <p>Applications Infrastructure (4 Pools)</p>
+                  </div>
+                  <input type="checkbox" name="selection" value="item1" />
+                </button>
+                <div class="accordion-content">
+                  <p>Content for section 1...</p>
+                </div>
+              </div>
+              <div class="accordion">
+                <button class="accordion-button">
+                  <div class="ea3-accordion-button-title">
+                    <div class="ea3-plus-icon">
+                      <img src="./img/add-outline.svg" alt="" />
+                    </div>
+                    <div class="ea3-minus-icon">
+                      <img src="./img/minus-icon.svg" alt="" />
+                    </div>
+                    <img src="./img/clone-filled.svg" alt="" />
+                    <p>Services (4 Pools)</p>
+                  </div>
+                  <input type="checkbox" name="selection" value="item1" />
+                </button>
+                <div class="accordion-content">
+                  <p>Content for section 1...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ea3-vertical-divider"></div>
+        <div class="ea3-blocking-rules">
+          <h3 class="ea3-accordian-column-heading">Suites Blocking Rules</h3>
+          <div class="ea3-blocking-rules-table">
+            <table class="ea3-create-table">
+              <thead>
+                <tr>
+                  <th width="100">
+                    <div class="ea3-enrollement-column">Rule ID</div>
+                  </th>
+                  <th width="240">Suite</th>
+                  <th>Incompat with</th>
+                  <th width="90">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="ea3-main-row ea3-toogle ea3-row-boder">
+                  <td>
+                    <div class="ea3-enrollement-column">114</div>
+                  </td>
+                  <td>
+                    <div class="ea3-ato-column">
+                      <div class="ea3-outlineBtn">
+                        Umbrella
+                        <span class="cross-icon"></span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="ea3-hide-div">
+                      <div class="ea3-ato-column">
+                        <div class="ea3-outlineBtn">
+                          Cisco Secure Connect
+                          <span class="cross-icon"></span>
+                        </div>
+                        <div class="ea3-outlineBtn">
+                          Cisco Email Threat Defence
+                          <span class="cross-icon"></span>
+                        </div>
+                        <div class="ea3-outlineBtn">
+                          User & Beach Protection (Combination)
+                          <span class="cross-icon"></span>
+                        </div>
+                        <div class="ea3-outlineBtn">
+                          Cisco Email Threat Defence
+                          <span class="cross-icon"></span>
+                        </div>
+                        <div class="ea3-outlineBtn">
+                          User Protection
+                          <span class="cross-icon"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ea3-show-text hidden">11 ATOs</div>
+                  </td>
+                  <td>
+                    <div class="ea3-action-column">
+                      <button class="edit-btn">
+                        <img src="./img/edit-icon.svg" />
+                      </button>
+                      <div class="ea3-icon-divider"></div>
+                      <button><img src="./img/delete-icon.svg" /></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr
+                  class="ea3-main-row ea3-toogle ea3-row-boder"
+                  id="ea3-hide-table"
+                >
+                  <td>
+                    <div class="ea3-enrollement-column">116</div>
+                  </td>
+                  <td>
+                    <div class="ea3-ato-column">
+                      <div class="ea3-outlineBtn">
+                        Cisco Secure Connect
+                        <span class="cross-icon"></span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="ea3-hide-div">
+                      <div class="ea3-ato-column">
+                        <div class="ea3-outlineBtn">
+                          Umbrella
+                          <span class="cross-icon"></span>
+                        </div>
+                        <div class="ea3-outlineBtn">
+                          Cisco Email Threat Defence
+                          <span class="cross-icon"></span>
+                        </div>
+                        <div class="ea3-outlineBtn">
+                          User Protection
+                          <span class="cross-icon"></span>
+                        </div>
+                        <div class="ea3-outlineBtn">
+                          Secure Endpoint
+                          <span class="cross-icon"></span>
+                        </div>
+                        <div class="ea3-outlineBtn">
+                          Breach Protection
+                          <span class="cross-icon"></span>
+                        </div>
+                        <div class="ea3-outlineBtn">
+                          User Protection
+                          <span class="cross-icon"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ea3-show-text hidden">16 ATOs</div>
+                  </td>
+                  <td>
+                    <div class="ea3-action-column">
+                      <button><img src="./img/edit-icon.svg" /></button>
+                      <div class="ea3-icon-divider"></div>
+                      <button><img src="./img/delete-icon.svg" /></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="ea3-hide-table ea3-row-boder1">
+                  <td><div class="ea3-enrollement-column">119</div></td>
+                  <td>
+                    <div class="ea3-ato-column">
+                      <div class="ea3-outlineBtn">
+                        Cisco Email Threat Defence
+                        <span class="cross-icon"></span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="ea3-ato-column">
+                      <div class="ea3-outlineBtn">
+                        User & Beach Protection (Combination)
+                        <span class="cross-icon"></span>
+                      </div>
+                      <div class="ea3-outlineBtn">
+                        Cisco Secure Connect
+                        <span class="cross-icon"></span>
+                      </div>
+                      <div class="ea3-outlineBtn">
+                        Secure Endpoint
+                        <span class="cross-icon"></span>
+                      </div>
+                      <div class="ea3-outlineBtn">
+                        DUO
+                        <span class="cross-icon"></span>
+                      </div>
+                      <div class="ea3-outlineBtn">
+                        Umbrella
+                        <span class="cross-icon"></span>
+                      </div>
+                      <div class="ea3-outlineBtn">
+                        Breach Protection
+                        <span class="cross-icon"></span>
+                      </div>
+                      <div class="ea3-outlineBtn">
+                        User Protection
+                        <span class="cross-icon"></span>
+                      </div>
+                    </div>
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="blockingRulesModal" class="ea3-modal requestModal">
+      <div class="ea3-modal-content requestModalContent">
+        <div class="ea3-modal-header requestHeader ea3-bgTransparent">
+          Suite Blocking Rules
+          <button
+            class="ea3-closebtn closeIcon"
+            onclick="closeRequestModal()"
+          ></button>
+        </div>
+        <div class="ea3-modal-body requestBody">
+          <div class="ea3-error-alert">
+            <div class="ea3-error-alert-content">
+              <img src="./img/exclamation-circle-outline.svg" />Error
+            </div>
+            <span>Sorry, Only one suite can be added at a time.</span>
+          </div>
+        </div>
+        <div class="ea3-modal-footer requestFooter">
+          <button class="ow-outlineBtn" onclick="closeRequestModal()">
+            Discard
+          </button>
+          <button class="ow-primaryBtn" onclick="redirectToEnrollment()">
+            Done
+          </button>
+        </div>
+        <!-- href="../ea3-enrollment/ea3-enrollment.html" -->
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

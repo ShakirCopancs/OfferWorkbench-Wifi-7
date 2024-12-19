@@ -1,0 +1,238 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+.ea3-breadcrumb {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  background-color: #e9ecef;
+  border-radius: 0.25rem;
+}
+.breadcrumb {
+  margin: 0;
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
+  background: #f4f5f6;
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+  padding: 0 0.5em;
+  color: #6c757d;
+}
+
+.breadcrumb-item a {
+  color: #0070d2;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+  color: #6c757d;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+}
+.ea3-threshold-heading {
+  padding: 12px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ebebeb;
+}
+.ea3-threshold-heading .ea3-header-left {
+  display: flex;
+  gap: 12px;
+}
+.ea3-threshold-heading .ea3-top-heading h2 {
+  color:  #1B1C1D;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px; 
+  letter-spacing: -0.32px;
+  margin: 0;
+}
+.ea3-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ea3-outlineBtn {
+  border-radius: 16px;
+  padding: 6px 24px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0070d2;
+  background-color: #fff;
+  border: 1px solid #0070d2;
+}
+.ea3-outlineBtn:hover {
+  color: #fff;
+  background-color: #0070d2;
+  transition: 0.5s ease-in-out;
+}
+.ea3-primaryBtn {
+  border-radius: 16px;
+  padding: 6px 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #0070d2;
+  border: 1px solid #0070d2;
+}
+.ea3-secondaryDisableBtn {
+  border-radius: 16px;
+  background: #EBEBEB;
+  padding: 6px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #8E8E8E;
+}
+.ea3-content-wrapper {
+  padding: 12px 40px;
+}
+.ea3-content-nav-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ea3-input {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.ea3-search-img {
+  position: absolute;
+    left: 16px;
+}
+.ea3-search-input {
+  padding: 10px 16px 10px 40px;
+  border-radius: 4px;
+  border: 1px solid #D6D6D6;
+  background: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #8E8E8E;
+}
+.ea3-linking-group {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+.ea3-linking-group .ea3-link-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ea3-linking-group .ea3-link-item span {
+  color: #0070D2;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+.ea3-vertical-line {
+  width: 1px;
+  height: 12px;
+  background-color: #D6D6D6;
+}
+.ea3-table-content {
+  margin-top: 12px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  text-align: center;
+}
+th, td {
+  padding: 8px 16px;
+  border-top: 2px solid  #EBEBEB;
+  border-right: 1px solid  #EBEBEB;
+  border-bottom: 2px solid  #EBEBEB;
+  background:  #FFF;
+}
+tr:nth-child(even){background-color: #f2f2f2;}
+
+ .ea3-table-heading-value {
+  color: #606162;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  display: block;
+}
+.ea3-flex-start {
+  align-items: flex-start;
+}
+.ea3-table-value-input {
+  border-color: #606162;
+  color: #606162;
+  border-width: 0 0 1px 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px; 
+  width: 110px;
+  padding: 4px 8px;
+}
+input:focus-visible {
+  outline: none;
+}
+
+.hiddenItem {
+  display: none;
+}
+.align-left {
+  text-align: left;
+}
+.showMoreButton {
+  background: transparent;
+  border: none;
+  color: #0070d2;
+  font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.ea3-validate-proposal {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 6px 24px;
+  border-radius: 16px;
+  border: 1px solid #EBEBEB;
+  background: transparent;
+  color: #8E8E8E;
+  cursor: pointer;
+  margin-left: 4px;
+  display: flex;
+  align-items: center;
+}
+.ea3-validate-proposal .ea3-btn-icon {
+  padding-right: 8px;
+  display: flex;
+}

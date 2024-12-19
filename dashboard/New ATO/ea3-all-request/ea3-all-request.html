@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EA3 All Request</title>
+    <link rel="stylesheet" href="./css/ea3-all-request.css" />
+    <link rel="stylesheet" href="../cisco-fonts.css" />
+    <link rel="stylesheet" href="../stepper.css" />
+    <link rel="stylesheet" href="../modal.css" />
+  </head>
+
+  <body>
+    <nav aria-label="ea3-breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Buying Program Dashboard</a>
+        </li>
+        <li class="breadcrumb-item"><a href="#">EA3.0</a></li>
+        <li class="breadcrumb-item active" aria-current="page">All Requests</li>
+      </ol>
+    </nav>
+    <div class="ea3-request-heading">
+      <div class="ea3-header-left ea3-top-heading">
+        <div class="ea3-header-left-request ea3-top-heading">
+          <h2>All Requests</h2>
+        </div>
+      </div>
+      <div class="ea3-btn-group">
+        <button class="ea3-primaryBtn" id="ea3CreateModal">Create Request</button>
+      </div>
+    </div>
+
+    <div class="ea3-request-content">
+      <h3 class="ea3-entry-title">Here are the All Request you can manage</h3>
+      <!-- Filter Top Section Start-->
+      <div class="ea3-table-filter-container">
+        <div class="ea3-search">
+          <button type="button" class="ea3-search-btn"></button>
+          <input type="text" placeholder="Search " />
+        </div>
+        <!-- Tabs Buttons Start-->
+        <div class="ea3-btns-group tabs">
+          <button type="button" class="btn btn-outline-primary active" data-target="all">
+            All
+          </button>
+          <button type="button" class="btn btn-outline-primary" data-target="inprogress">
+            In Progress
+          </button>
+          <button type="button" class="btn btn-outline-primary" data-target="completed">
+            Completed
+          </button>
+          <button type="button" class="btn btn-outline-primary" data-target="cancelled">
+            Cancelled
+          </button>
+        </div>
+        <!-- Tabs Buttons End-->
+      </div>
+      <!-- Filter Top Section End-->
+      <div class="table_scroll">
+        <!-- All Table Start-->
+        <div id="all" class="tab-content">
+          <table class="ea3-table-grid">
+            <thead>
+              <tr>
+                <th width="150">
+                  <div class="ea3-check-content"><input type="checkbox" />Request ID</div>
+                </th>
+                <th width="200">Product/ATO name</th>
+                <th width="200">User Intent</th>
+                <th width="200">Description</th>
+                <th width="120">Status</th>
+                <th width="160">Request Owner</th>
+                <th width="170">Secondary Owner</th>
+                <th width="130">Created Date</th>
+                <th width="210">Last Design Publish Date</th>
+                <th width="240">Runtime Publish Data</th>
+                <th width="80">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />35616</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text"> E#-N-MDS </span
+                    ><button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">New ATO/Billing PID Setup</td>
+                <td class="ellipsis-text">
+                  Enables users to add multiple ATOs for comprehensive management.
+                </td>
+                <td><span class="badge inprogress-badge">IN PROGRESS</span></td>
+                <td>
+                  <div class="ea3-edit-text">
+                    <span class="ellipsis-text"> sasunkar</span>
+                  </div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/15/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />35612</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text"> E#-N-MDS </span
+                    ><button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">Replacement PID Setup</td>
+                <td class="ellipsis-text">
+                  Enables users to add one ATO at a time, ensuring precise management.
+                </td>
+                <td><span class="badge inprogress-badge">IN PROGRESS</span></td>
+                <td>
+                  <div class="ea3-edit-text">
+                    <span class="ellipsis-text">kalthaku </span>
+                  </div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/15/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />35611</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text"> E3-H-EP-ADV </span
+                    ><button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">Sustaining changes</td>
+                <td class="ellipsis-text">
+                  Enables users to update existing requests by modifying their data.
+                </td>
+                <td><span class="badge complete-badge">COMPLETED</span></td>
+                <td>
+                  <div class="ea3-edit-text">
+                    <span class="ellipsis-text"> kalthaku </span>
+                  </div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/14/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />35608</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text"> E#-N-MDS </span
+                    ><button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">New ATO/Billing PID Setup</td>
+                <td class="ellipsis-text">
+                  Enables users to add multiple ATOs for comprehensive management.
+                </td>
+                <td><span class="badge complete-badge">COMPLETED</span></td>
+                <td>
+                  <div class="ea3-edit-text">
+                    <span class="ellipsis-text">kalthaku </span>
+                  </div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/14/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="ellipsis-text">11/09/2024 01:20 (mokambha)</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />35607</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text"> E#-N-MDS </span
+                    ><button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">Replacement PID Setup</td>
+                <td class="ellipsis-text">
+                  Enables users to add one ATO at a time, ensuring precise management.
+                </td>
+                <td><span class="badge inprogress-badge">IN PROGRESS</span></td>
+                <td>
+                  <div class="ea3-edit-text">
+                    <span class="ellipsis-text"> kalthaku </span>
+                  </div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/14/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />35607</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text"> E#-N-MDS </span
+                    ><button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">New ATO/Billing PID Setup</td>
+                <td class="ellipsis-text">
+                  Enables users to add multiple ATOs for comprehensive management.
+                </td>
+                <td><span class="badge inprogress-badge">IN PROGRESS</span></td>
+                <td>
+                  <div class="ea3-edit-text">
+                    <span class="ellipsis-text"> kalthaku </span>
+                  </div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/14/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />35603</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text"> E#-N-MDS </span
+                    ><button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">Sustaining changes</td>
+                <td class="ellipsis-text">
+                  Enables users to update existing requests by modifying their data.
+                </td>
+                <td><span class="badge cancel-badge">CANCELLED</span></td>
+                <td>
+                  <div class="ea3-edit-text">
+                    <span class="ellipsis-text"> kalthaku </span>
+                  </div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/14/2024</td>
+                <td class="ellipsis-text">05/10/2024 09:43 (mokambha)</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />35599</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text"> E#-N-MDS </span>
+
+                    <button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">Replacement PID Setup</td>
+                <td class="ellipsis-text">
+                  Enables users to add one ATO at a time, ensuring precise management.
+                </td>
+                <td><span class="badge cancel-badge">CANCELLED</span></td>
+                <td>
+                  <div class="ea3-edit-text">
+                    <span class="ellipsis-text"> kalthaku </span>
+                  </div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/14/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />35592</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text"> E3-DUO-FEDM-SVS1, E3-DUO-FEAF-SVS3</span>
+
+                    <button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">New ATO/Billing PID Setup</td>
+                <td class="ellipsis-text">
+                  Enables users to add multiple ATOs for comprehensive management.
+                </td>
+                <td><span class="badge inprogress-badge">IN PROGRESS</span></td>
+                <td>
+                  <div class="ea3-edit-text">
+                    <span class="ellipsis-text"> nedev </span>
+                  </div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/14/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- All Table End-->
+        <!-- In Progress Table Start-->
+        <div id="inprogress" class="tab-content">
+          <table class="ea3-table-grid">
+            <thead>
+              <tr>
+                <th width="150">
+                  <div class="ea3-check-content"><input type="checkbox" />Request ID</div>
+                </th>
+                <th width="200">Product/ATO name</th>
+                <th width="200">User Intent</th>
+                <th width="200">Description</th>
+                <th width="120">Status</th>
+                <th width="160">Request Owner</th>
+                <th width="170">Secondary Owner</th>
+                <th width="130">Created Date</th>
+                <th width="210">Last Design Publish Date</th>
+                <th width="80">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />35616</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text">E#-N-MDS</span>
+                    <button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">New ATO/Billing PID Setup</td>
+                <td class="ellipsis-text">Enables users to add...</td>
+                <td><span class="badge inprogress-badge">IN PROGRESS</span></td>
+                <td>
+                  <div class="ea3-edit-text">
+                    <span class="ellipsis-text">sasunkar</span>
+                  </div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/15/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />35612</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text">E3-H-EP-ADV</span>
+                    <button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">Replacement PID Setup</td>
+                <td class="ellipsis-text">Enables users to add...</td>
+                <td><span class="badge inprogress-badge">IN PROGRESS</span></td>
+                <td>
+                  <div class="ea3-edit-text">
+                    <span class="ellipsis-text">kalthaku</span>
+                  </div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/15/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />35611</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text">E3-COLLAB</span>
+                    <button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">Sustaining change</td>
+                <td class="ellipsis-text">Enables users to upda...</td>
+                <td><span class="badge inprogress-badge">IN PROGRESS</span></td>
+                <td>
+                  <div class="ea3-edit-text">
+                    <span class="ellipsis-text">kalthaku</span>
+                  </div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/14/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />35608</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text">PMI-XTEMP-PID4...</span>
+                    <button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">New ATO/Billing PID Setup</td>
+                <td class="ellipsis-text">Enables users to add...</td>
+                <td><span class="badge inprogress-badge">IN PROGRESS</span></td>
+                <td>
+                  <div class="ea3-edit-text">
+                    <span class="ellipsis-text">kalthaku</span>
+                  </div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/14/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />35607</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text">E3-N-SPACES-A</span>
+                    <button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">Replacement PID Setup</td>
+                <td class="ellipsis-text">Enables users to add...</td>
+                <td><span class="badge inprogress-badge">IN PROGRESS</span></td>
+                <td>
+                  <div class="ea3-edit-text">
+                    <span class="ellipsis-text">nedev</span>
+                  </div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/14/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />35607</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text">E3-N-SPACES-A</span>
+                    <button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">New ATO/Billing PID Setup</td>
+                <td class="ellipsis-text">Enables users to add...</td>
+                <td><span class="badge inprogress-badge">IN PROGRESS</span></td>
+                <td>
+                  <div class="ea3-edit-text">
+                    <span class="ellipsis-text">trzope</span>
+                  </div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/14/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />35603</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text">E3-N-AS-DNX</span>
+                    <button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">Sustaining change</td>
+                <td class="ellipsis-text">Enables users to upda...</td>
+                <td><span class="badge inprogress-badge">IN PROGRESS</span></td>
+                <td>
+                  <div class="ea3-edit-text">
+                    <span class="ellipsis-text">mokambha</span>
+                  </div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/10/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />35599</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text">E3-N-MRCS</span>
+                    <button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">Replacement PID Setup</td>
+                <td class="ellipsis-text">Enables users to add...</td>
+                <td><span class="badge inprogress-badge">IN PROGRESS</span></td>
+                <td>
+                  <div class="ea3-edit-text">
+                    <span class="ellipsis-text">nedev</span>
+                  </div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/10/2024</td>
+                <td class="ellipsis-text">05/10/2024 09:43 (m...</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />35592</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text">E3-DUO-FEDM-SVS1, E3-DUO-FEAF-SVS3</span>
+                    <button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">New ATO/Billing PID Setup</td>
+                <td class="ellipsis-text">Enables users to add...</td>
+                <td><span class="badge inprogress-badge">IN PROGRESS</span></td>
+                <td>
+                  <div class="ea3-edit-text">
+                    <span class="ellipsis-text">nedev</span>
+                  </div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/09/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- In Progress Table End-->
+
+        <!-- Completed Table Start-->
+        <div id="completed" class="tab-content">
+          <table class="ea3-table-grid">
+            <thead>
+              <tr>
+                <th width="150">
+                  <div class="ea3-check-content"><input type="checkbox" />Request ID</div>
+                </th>
+                <th width="200">Product/ATO name</th>
+                <th width="200">User Intent</th>
+                <th width="200">Description</th>
+                <th width="120">Status</th>
+                <th width="160">Request Owner</th>
+                <th width="170">Secondary Owner</th>
+                <th width="130">Created Date</th>
+                <th width="180">Runtime Publish Date</th>
+                <th width="80">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />40089</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text">E#-N-FDS</span>
+                    <button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">New ATO/Billing PID Setup</td>
+                <td class="ellipsis-text">Enables users to add...</td>
+                <td><span class="badge complete-badge">COMPLETED</span></td>
+                <td>
+                  <div class="ea3-edit-text">
+                    <span class="ellipsis-text">sasunkar</span>
+                  </div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/15/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />40088</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text">E3-H-EP-ADS</span>
+                    <button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">Replacement PID Setup</td>
+                <td class="ellipsis-text">Enables users to add...</td>
+                <td><span class="badge complete-badge">COMPLETED</span></td>
+                <td>
+                  <div class="ea3-edit-text">
+                    <span class="ellipsis-text">kalthaku</span>
+                  </div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/15/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />40087</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text">E3-COLLAB</span>
+                    <button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">Sustaining change</td>
+                <td class="ellipsis-text">Enables users to upda...</td>
+                <td><span class="badge complete-badge">COMPLETED</span></td>
+                <td>
+                  <div class="ea3-edit-text">
+                    <span class="ellipsis-text">kalthaku</span>
+                  </div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/14/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />40086</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text">PMI-TTEMP-PID4...</span>
+                    <button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">New ATO/Billing PID Setup</td>
+                <td class="ellipsis-text">Enables users to add...</td>
+                <td><span class="badge complete-badge">COMPLETED</span></td>
+                <td>
+                  <div class="ea3-edit-text">
+                    <span class="ellipsis-text">kalthaku</span>
+                  </div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/14/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />35607</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text">E3-V-SPACES-A</span>
+                    <button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">Replacement PID Setup</td>
+                <td class="ellipsis-text">Enables users to add...</td>
+                <td><span class="badge complete-badge">COMPLETED</span></td>
+                <td>
+                  <div class="ea3-edit-text">
+                    <span class="ellipsis-text">nedev</span>
+                  </div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/14/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />35409</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text">E3-N-SPACES-C</span>
+                    <button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">New ATO/Billing PID Setup</td>
+                <td class="ellipsis-text">Enables users to add...</td>
+                <td><span class="badge complete-badge">COMPLETED</span></td>
+                <td>
+                  <div class="ea3-edit-text">
+                    <span class="ellipsis-text">trzope</span>
+                  </div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/14/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />35408</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text">E3-N-GS-DNX</span>
+                    <button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">Sustaining change</td>
+                <td class="ellipsis-text">Enables users to upda...</td>
+                <td><span class="badge complete-badge">COMPLETED</span></td>
+                <td>
+                  <div class="ea3-edit-text">
+                    <span class="ellipsis-text">mokambha</span>
+                  </div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/10/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />35209</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text">E3-N-MCCS</span>
+                    <button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">Replacement PID Setup</td>
+                <td class="ellipsis-text">Enables users to add...</td>
+                <td><span class="badge complete-badge">COMPLETED</span></td>
+                <td>
+                  <div class="ea3-edit-text">
+                    <span class="ellipsis-text">nedev</span>
+                  </div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/10/2024</td>
+                <td class="ellipsis-text">05/10/2024 09:43 (m...</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />35356</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text">E3-DUO-FEDM-SVS1, E3-DUO-FEAF-SVS3</span>
+                    <button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">New ATO/Billing PID Setup</td>
+                <td class="ellipsis-text">Enables users to add...</td>
+                <td><span class="badge complete-badge">COMPLETED</span></td>
+                <td>
+                  <div class="ea3-edit-text">
+                    <span class="ellipsis-text">nedev</span>
+                  </div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/09/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Completed Table End-->
+
+        <!-- Cancelled Table Start-->
+        <div id="cancelled" class="tab-content">
+          <table class="ea3-table-grid">
+            <thead>
+              <tr>
+                <th width="150">
+                  <div class="ea3-check-content"><input type="checkbox" />Request ID</div>
+                </th>
+                <th width="200">Product/ATO name</th>
+                <th width="200">User Intent</th>
+                <th width="200">Description</th>
+                <th width="120">Status</th>
+                <th width="160">Request Owner</th>
+                <th width="170">Secondary Owner</th>
+                <th width="130">Created Date</th>
+                <th width="180">Runtime Publish Date</th>
+                <th width="80">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />42345</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text">E#-N-FDS</span>
+                    <button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">New ATO/Billi...</td>
+                <td class="ellipsis-text">Enables users to add...</td>
+                <td><span class="badge cancel-badge">CANCELLED</span></td>
+                <td>
+                  <div class="ea3-edit-text"><span class="ellipsis-text">sasunkar</span></div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/15/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />42344</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text">E3-H-EP-ADS</span>
+                    <button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">Replacement...</td>
+                <td class="ellipsis-text">Enables users to add...</td>
+                <td><span class="badge cancel-badge">CANCELLED</span></td>
+                <td>
+                  <div class="ea3-edit-text"><span class="ellipsis-text">kalthaku</span></div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/15/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />42343</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text">E3-COLLAB</span>
+                    <button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">Sustaining cha...</td>
+                <td class="ellipsis-text">Enables users to upda...</td>
+                <td><span class="badge cancel-badge">CANCELLED</span></td>
+                <td>
+                  <div class="ea3-edit-text"><span class="ellipsis-text">kalthaku</span></div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/14/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />42342</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text">PMI-TTEMP-PID4...</span>
+                    <button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">New ATO/Billi...</td>
+                <td class="ellipsis-text">Enables users to add...</td>
+                <td><span class="badge cancel-badge">CANCELLED</span></td>
+                <td>
+                  <div class="ea3-edit-text"><span class="ellipsis-text">kalthaku</span></div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/14/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />23467</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text">E3-V-SPACES-A</span>
+                    <button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">Replacement...</td>
+                <td class="ellipsis-text">Enables users to add...</td>
+                <td><span class="badge cancel-badge">CANCELLED</span></td>
+                <td>
+                  <div class="ea3-edit-text"><span class="ellipsis-text">nedev</span></div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/14/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />26783</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text">E3-N-SPACES-C</span>
+                    <button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">New ATO/Billi...</td>
+                <td class="ellipsis-text">Enables users to add...</td>
+                <td><span class="badge cancel-badge">CANCELLED</span></td>
+                <td>
+                  <div class="ea3-edit-text"><span class="ellipsis-text">trzope</span></div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/14/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />29834</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text">E3-N-GS-DNX</span>
+                    <button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">Sustaining cha...</td>
+                <td class="ellipsis-text">Enables users to upda...</td>
+                <td><span class="badge cancel-badge">CANCELLED</span></td>
+                <td>
+                  <div class="ea3-edit-text"><span class="ellipsis-text">mokambha</span></div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/10/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />35208</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text">E3-N-MCCS</span>
+                    <button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">Replacement...</td>
+                <td class="ellipsis-text">Enables users to add...</td>
+                <td><span class="badge cancel-badge">CANCELLED</span></td>
+                <td>
+                  <div class="ea3-edit-text"><span class="ellipsis-text">nedev</span></div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/10/2024</td>
+                <td class="ellipsis-text">05/10/2024 09:43 (m...</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ea3-check-content"><input type="checkbox" />35456</div>
+                </td>
+                <td>
+                  <div class="ea3-minimise-content">
+                    <span class="ellipsis-text">E3-DUO-FEDM-SVS1, E3-DUO-FEAF-SVS3</span>
+                    <button
+                      class="icon-down-chevrons"
+                      type="button"
+                      onclick="toggleHighlight(this)"
+                    ></button>
+                  </div>
+                </td>
+                <td class="ellipsis-text">New ATO/Billi...</td>
+                <td class="ellipsis-text">Enables users to add...</td>
+                <td><span class="badge cancel-badge">CANCELLED</span></td>
+                <td>
+                  <div class="ea3-edit-text"><span class="ellipsis-text">nedev</span></div>
+                </td>
+                <td>
+                  <a href="javascript:void(0)"><img src="./img/edit.svg" alt="Edit" /></a>
+                </td>
+                <td class="ellipsis-text">05/09/2024</td>
+                <td class="ellipsis-text">-</td>
+                <td class="actions">
+                  <a href="#"><img src="./img/arrow-right-tail.svg" alt="" /></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Cancelled Table End-->
+      </div>
+      <!-- Pagination Start -->
+      <div class="pagination-wrap">
+        <div class="sorting-wrapper">
+          <div class="result-count">Rows per page</div>
+
+          <select class="orderby">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
+
+          <div class="result-count">1-10 of 100</div>
+        </div>
+
+        <ul class="pagination">
+          <li class="prev-page-last"><button disabled></button></li>
+          <li class="prev-page"><button disabled></button></li>
+          <li><button class="active">1</button></li>
+          <li><button>2</button></li>
+          <li><button>3</button></li>
+          <li><button>4</button></li>
+          <li><button>...</button></li>
+          <li><button>10</button></li>
+          <li class="next-page"><button></button></li>
+          <li class="next-page-last"><button></button></li>
+        </ul>
+      </div>
+      <!-- Pagination End -->
+    </div>
+
+    <div id="ea3myModal" class="modal">
+      <div class="ea3-modal-content">
+        <span class="ea3-ea-batch">EA 3.0</span>
+        <h3>I want to Create Request for <span>Something</span> for EA 3.0.</h3>
+        <p>Choose an intent</p>
+        <div class="ea3-intent-options">
+          <div class="ea3-action-buttons myElement">
+            <img src="./img/ato-billing.svg" />
+            <div class="ea3-action-tittle">New ATO/Billing PID Setup</div>
+            <p class="ea3-action-content">
+              Enables users to add multiple ATOs for comprehensive management.
+            </p>
+          </div>
+          <div class="ea3-action-buttons myElement">
+            <img src="./img/replacement.svg" />
+            <div class="ea3-action-tittle">Replacement PID Setup</div>
+            <p class="ea3-action-content">
+              Enables users to add one ATO at a time, ensuring precise management.
+            </p>
+          </div>
+          <div class="ea3-action-buttons myElement">
+            <img src="./img/sustaining.svg" />
+            <div class="ea3-action-tittle">Sustaining Changes</div>
+            <p class="ea3-action-content">
+              Enables users to update existing requests by modifying their data.
+            </p>
+          </div>
+        </div>
+        <div class="ea3-action-buttons myElement">
+          <button class="ow-outlineBtn close">Cancel</button>
+          <a class="ea3-modal-continue ea3-open-modal" onclick="openRequestModal()">Continue</a>
+        </div>
+      </div>
+    </div>
+    <div id="requestModal" class="ea3-modal requestModal">
+      <div class="ea3-modal-content requestModalContent">
+        <div class="ea3-modal-header requestHeader">
+          Request Initiation
+          <button class="ea3-closebtn closeIcon" onclick="closeRequestModal()"></button>
+        </div>
+        <div class="ea3-modal-body requestBody">
+          <div class="ea3-ensure-owner">
+            <img src="./img/explosion.svg" />Before proceeding with your request, please ensure all
+            required details are filled.
+          </div>
+          <div class="requestInputBox">
+            <label for="ownerName">Request Owner <span class="ea3-star">*</span></label>
+            <input type="text" id="ownerName" name="ownerName" placeholder="Olivia" />
+          </div>
+          <div class="requestInputBox">
+            <label for="ownerEmail">secondary owner</label>
+            <input
+              type="email"
+              id="ownerEmail"
+              name="ownerEmail"
+              placeholder="Enter secondary owner name"
+            />
+          </div>
+          <div class="requestInputBox">
+            <label for="ownerdescription">Description <span class="ea3-star">*</span></label>
+            <textarea placeholder="#Epic35659 involves Setting up the EA Firestrom NPI"></textarea>
+          </div>
+        </div>
+        <div class="ea3-modal-footer requestFooter">
+          <button class="ow-outlineBtn" onclick="closeRequestModal()">Cancel</button>
+          <button class="ow-primaryBtn" onclick="redirectToEnrollment()">Done</button>
+        </div>
+        <!-- href="../ea3-enrollment/ea3-enrollment.html" -->
+      </div>
+    </div>
+    <script src="./js/ea3-all-request.js"></script>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+.ea3-stepper {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 24px 0;
+  margin: 0;
+  border-bottom: 1px solid #d6d6d6;
+}
+.ea3-step-list {
+  display: flex;
+  width: 95%;
+  margin: auto;
+}
+
+.ea3-stepper .ea3-steps {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ea3-stepper .ea3-steps.active .dot {
+  background-color: #0070d2;
+}
+
+li.ea3-steps.inprogress .lower-text {
+  color: #1b1c1d;
+}
+li.ea3-steps.active .lower-text {
+  color: #1b1c1d;
+}
+li.ea3-steps.disabled .lower-text {
+  color: #4a4b4d;
+}
+
+.ea3-stepper .ea3-steps.active:after {
+  background-color: #0070d2;
+}
+
+.ea3-stepper .ea3-steps:last-child:after {
+  width: 0px;
+}
+
+.ea3-stepper .ea3-steps:after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  top: 12px;
+  background-color: #d6d6d6;
+  z-index: 0;
+}
+.ea3-stepper .ea3-steps .lower-text {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #4a4b4d;
+  display: block;
+  margin-top: 8px;
+}
+.ea3-stepper .ea3-steps .date-text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: left;
+  margin-top: 4px;
+  color: #606162;
+}
+.ea3-stepper .ea3-steps.active .date-text {
+  color: #242526;
+}
+.ea3-stepper .ea3-steps .dot {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  background-color: #ebebeb;
+  border: 1px solid #ebebeb;
+}
+
+.ea3-stepper .ea3-steps.inprogress .dot {
+  background-color: #0070d2;
+}
+.ea3-stepper .ea3-steps.inprogress .dot::before {
+  background-color: #0070d2;
+  content: "";
+  height: 17px;
+  width: 17px;
+  border: 2px solid #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 30px;
+}
+.ea3-stepper .ea3-steps.active .dot::after {
+  content: " ";
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  right: 0;
+  margin: 0 auto;
+  top: 4px;
+  display: block;
+  font-size: 14px;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.70848 14.7213L3.34897 10.3618C3.05067 10.0635 3.05067 9.57997 3.34897 9.28167C3.64727 8.98337 4.13081 8.98337 4.42911 9.28167L7.70848 12.561L15.5712 4.69833C15.8695 4.40003 16.353 4.40003 16.6513 4.69833C16.9496 4.99663 16.9496 5.48017 16.6513 5.77847L7.70848 14.7213Z" fill="white"/></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18px;
+}
+.ea3-steps:last-child {
+  width: 50%;
+}
+
+.ea3-proposal-setup {
+  padding: 12px 0;
+  margin-top: 4px;
+}
+
+.ea3-proposal-setup h5 {
+  color: #1b1c1d;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0 0 12px;
+}
+.ea3-proposal-setup p {
+  color: #1b1c1d;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0;
+}
+.ea3-uploaded-doc {
+  border-radius: 4px;
+  border: 1px solid #d6d6d6;
+  background: #fff;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.ea3-uploaded-doc p {
+  color: #1b1c1d;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0;
+}
+.ea3-uploaded-doc span {
+  color: #606162;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0;
+  display: block;
+}
+.ea3-uploaded-doc .doc-details {
+  width: 100%;
+}
+.offcanvas-sidebar .ea3-step-list {
+  width: 58%;
+}
+.offcanvas-sidebar .ea3-step-list .ea3-steps.active:first-child::after {
+  background-color: #d6d6d6;
+}
+
+.ea3-stepper .ea3-steps.waiting .dot:before {
+  width: 26px;
+  height: 27px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  background-color: #fff;
+  border: 2px solid #0070D2;
+  border-style: dashed;
+  content: '';
+}
+.ea3-stepper .ea3-steps.waiting .dot:after {
+  width: 18px;
+  height: 19px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  background-color: #0070D2;
+  border: 2px solid #0070D2;
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 4px;
+}

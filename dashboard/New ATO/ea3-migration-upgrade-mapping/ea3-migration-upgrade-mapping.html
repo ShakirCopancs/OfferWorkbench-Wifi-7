@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ea3-migration-upgrade-mapping</title>
+    <link rel="stylesheet" href="./css/ea3-migration-upgrade-mapping.css">
+    <link rel="stylesheet" href="../cisco-fonts.css" />
+    <link rel="stylesheet" href="../stepper.css" />
+
+</head>
+<body>
+    <div class="ea3-migration-container">
+<!-- ea3-migration-header start here -->
+        <div class="ea3-migration-header">
+            <h2>Migration Setup for EA3.0 Upgrade Mapping <span class="ea3-aero-down"><img src="./img/aero-down.svg"></span></h2>
+                <div class="ea3-migration-button-group">
+                    <a href="javascript:void(0);" class="ea3-back">Back</a>
+                    <a href="../ea3-migration-upgrade-mapping copy/ea3-migration-upgrade-mapping.html" class="ea3-publish-production">Publish to Production</a>
+                  </div>
+        </div>
+<!-- ea3-migration-header end here -->  
+
+<!-- error check bar start here -->  
+<div class="ea3-alert1 alert-primary">
+    <img src="./img/error-check.svg" alt="">
+    <p>
+        Amet minim mollit ullamco non deserunt est sit aliqua dolor do amet sint duis enim.
+    </p>
+  </div>
+  <!-- error check bar end here -->  
+
+  <!-- main table component start here -->
+  <div class="ea3-upgrade-content">
+    EA3.0 Upgrade Mapping
+  </div>
+  <div class="ea3-table-searchbar">
+    <div class="ea3-searchbar">
+        <span class="ea3-dropdown">Source ATOs <span class="ea3-aero-down"><img src="./img/aero-down.svg"></span></span>
+        <div class="ea3-search">
+            <span class="fa fa-search"><img src="./img/search.svg" alt="Add"></span>
+            <input placeholder="Search by Source ATOs">
+          </div>
+    </div>
+    <div class="ea3-table-searchbar-button-group">
+        <button class="ea3-mappings"><span class="ea3-btn-icon"><img src="./img/download-map.svg"></span>Download All Mappings</button>
+        <div class="ea3-boder-12"></div>
+        <button class="ea3-mappings"><span class="ea3-btn-icon"><img src="./img/upload-map.svg"></span>Upload Mappings</button>
+        <button class="ea3-validate-proposal"> <span class="ea3-btn-icon"><img src="./img/validate-true.svg"></span>Validate Proposal Construct</button>
+    </div>
+
+  </div>
+
+<!-- table start here -->
+<table class="custom-table">
+    <thead>
+      <tr>
+        <th>Source ATOs</th>
+        <th>Source Billing PIDs</th>
+        <th>Destination ATOs</th>
+        <th>Destination Billing PIDs</th>
+        <th>Default Tier</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="hide-row">
+        <td>
+          <div class="first-column">
+            <div class="select-row">
+              <input type="checkbox" />
+              <label for="">E3-DUO-ESS-SVS1</label>
+            </div>
+            <div class="drop-down">
+              <button class="copy-icon">
+                <img src="./img/copy-icon.svg" alt="" />
+              </button>
+              <button class="drop-down-btn" onclick="showMenu(this)">
+                <img src="./img/aero-down.svg" alt="" />
+              </button>
+            </div>
+            <div class="drop-down-menu" id="dropdownMenu">
+                <div class="ea3-search">
+                    <span class="fa fa-search"><img src="./img/search.svg" alt="Add"></span>
+                    <input placeholder="Search ATO(s)">
+                  </div>
+              <div class="dropdown-items">
+                <ul>
+                  <li>E2-C1-T-SDWAN</li>
+                  <li>E2-C1-T-SDWAN</li>
+                  <li>E2-C1-T-SDWAN</li>
+                  <li>E2-C1-T-SDWAN</li>
+                  <li>E2-C1-T-SDWAN</li>
+                  <li>E2-C1-T-SDWAN</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td></td>
+        <td>
+            <div class="first-column">
+                <div class="select-row">
+                  <label for="">E3-DUO-ESS-SVS1</label>
+                </div>
+                <div class="drop-down">
+                  <button class="copy-icon">
+                    <img src="./img/copy-icon.svg" alt="" />
+                  </button>
+                  <button class="drop-down-btn">
+                    <img src="./img/aero-down.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+        </td>
+        <td></td>
+        <td><div class="first-column">
+            <div class="select-row">
+              <label for="">Y</label>
+            </div>
+          </div></td>
+        <td>
+            <div class="ea3-action-column">
+                <button> <img src="./img/edit-icon.svg"></button>
+                 <div class="ea3-icon-divider"></div>
+                 <button><img src="./img/delete-icon.svg"></button>
+               </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="first-column">
+            <div class="select-row">
+              <input type="checkbox" />
+              <label for="">E3-DUO-ESS-SVS1</label>
+            </div>
+            <div class="drop-down">
+              <button class="copy-icon">
+                <img src="image/aero-down.svg" alt="" />
+              </button>
+              <button class="drop-down-btn" >
+                <img src="./img/aero-down.svg" alt="" />
+              </button>
+            </div>
+            <div class="drop-down-menu" id="dropdownMenu">
+                <div class="ea3-search">
+                    <span class="fa fa-search"><img src="./img/search.svg" alt="Add"></span>
+                    <input placeholder="Search ATO(s)">
+                  </div>
+              <div class="dropdown-items">
+                <ul>
+                  <li>E2-C1-T-SDWAN</li>
+                  <li>E2-C1-T-SDWAN</li>
+                  <li>E2-C1-T-SDWAN</li>
+                  <li>E2-C1-T-SDWAN</li>
+                  <li>E2-C1-T-SDWAN</li>
+                  <li>E2-C1-T-SDWAN</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+            <div class="first-column">
+                <div class="select-row">
+                  <label for=""></label>
+                </div>
+                <div class="drop-down">
+                  <button class="copy-icon">
+                    <img src="image/aero-down.svg" alt="" />
+                  </button>
+                  <button class="drop-down-btn">
+                    <img src="./img/aero-down.svg" alt="" />
+                  </button>
+                </div>
+              </div> 
+        </td>
+        <td>
+            <div class="first-column">
+                <div class="select-row">
+                  <label for=""></label>
+                </div>
+                <div class="drop-down">
+                  <button class="copy-icon">
+                    <img src="image/aero-down.svg" alt="" />
+                  </button>
+                  <button class="drop-down-btn">
+                    <img src="./img/aero-down.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+        </td>
+        <td>
+            <div class="first-column">
+                <div class="select-row">
+                  <label for="">E3-DUO-ESS-SVS1</label>
+                </div>
+                <div class="drop-down">
+                  <button class="copy-icon">
+                    <img src="image/aero-down.svg" alt="" />
+                  </button>
+                  <button class="drop-down-btn">
+                    <img src="./img/aero-down.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+        </td>
+        <td></td>
+        <td>
+            <div class="ea3-action-column">
+                <button> <img src="./img/edit-icon.svg"></button>
+                 <div class="ea3-icon-divider"></div>
+                 <button><img src="./img/delete-icon.svg"></button>
+               </div>
+        </td>
+      </tr>
+      <tr class="last-row">
+        <td>
+          <div class="add-items">
+            <button class="add-items-btn" onclick="toggleRow()">
+              Add Items
+            </button>
+          </div>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- table end here -->
+
+   <!-- main table component end here -->
+    </div>
+
+    <script>
+      function toggleRow() {
+        var row = document.querySelector(".hide-row");
+        if (row.style.display === "none" || row.style.display === "") {
+          row.style.display = "table-row";
+        } else {
+          row.style.display = "none";
+        }
+      }
+      function showMenu(button) {
+    var dropdownMenu = button.parentElement.nextElementSibling;
+    if (dropdownMenu.style.display === "block") {
+      dropdownMenu.style.display = "none";
+    } else {
+      closeAllMenus();
+      dropdownMenu.style.display = "block";
+    }
+  }
+
+  function closeAllMenus() {
+    var dropdowns = document.querySelectorAll('.drop-down-menu');
+    dropdowns.forEach(function(menu) {
+      menu.style.display = 'none';
+    });
+  }
+
+  document.addEventListener('click', function(event) {
+    var isClickInside = event.target.closest('.first-column');
+    if (!isClickInside) {
+      closeAllMenus();
+    }
+  });
+    </script>
+</body>
+</html>

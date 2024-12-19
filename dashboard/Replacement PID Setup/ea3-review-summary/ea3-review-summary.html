@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="../stepper.css" />
+    <link rel="stylesheet" href="../sidebar.css" />
+    <link rel="stylesheet" href="../cisco-fonts.css" />
+    <link rel="stylesheet" href="../modal.css" />
+  </head>
+  <body>
+    <nav aria-label="ea3-breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Buying Program Dashboard</a>
+        </li>
+        <li class="breadcrumb-item"><a href="#">Create Request</a></li>
+        <li class="breadcrumb-item active" aria-current="page">
+          Request Details
+        </li>
+      </ol>
+    </nav>
+    <!-- -------------- Heading Start ----------------- -->
+    <div class="ea3-request-heading">
+      <div class="ea3-header-left ea3-top-heading">
+        <div>
+          <div class="ea3-header-left-request">
+            <h2>Request ID: <span>35659</span></h2>
+            <img src="./img/edit.svg" alt="" />
+          </div>
+          <div class="ea3-sub-tittle">Epic#35659- EA Firestorm NPI Setups</div>
+        </div>
+        <div class="ea3-owner-user-box">
+          <p>Status</p>
+          <div class="ea3-badge">In Progress</div>
+        </div>
+        <div class="ea3-owner-user-box">
+          <p>Request Owner</p>
+          <div class="ea3-olivia">Olivia</div>
+        </div>
+        <div class="ea3-owner-user-box">
+          <p>Secondary Owner</p>
+          <a
+          href="javascript:void()"
+          class="ea3-olivia-link"
+          onclick="openRequestModal()"
+          >Add</a
+        >
+        </div>
+        <div class="ea3-owner-user-box">
+          <p>User Intent</p>
+          <div class="ea3-olivia">Replacement PID Setup</div>
+        </div>
+      </div>
+      <div class="ea3-btn-group">
+        <a
+          href="../ea3-requestId-provision-fulfillment/ea3-requestid-provision-fulfillment.html"
+          class="ea3-outlineBtn"
+          >Cancel Request</a
+        >
+        <a href="#" class="ea3-primaryBtn">Submit for approval</a>
+      </div>
+    </div>
+    <!-- -------------- Heading End ----------------- -->
+
+    <div class="ea3-main">
+      <div class="ea3-left-content">
+        <!-- ______________ Stepper start ________________  -->
+        <div class="ea3-stepper">
+          <ul class="ea3-step-list">
+            <li class="ea3-steps active">
+              <span class="dot"></span>
+              <span class="lower-text"> Offer Structure </span>
+              <span class="date-text">4 May,2024</span>
+            </li>
+            <li class="ea3-steps active">
+              <span class="dot"></span>
+              <span class="lower-text"> Proposal Construct </span>
+              <span class="date-text">4 May,2024</span>
+            </li>
+            <li class="ea3-steps active">
+              <span class="dot"></span>
+              <span class="lower-text"> Commit Rules </span>
+              <span class="date-text">5 May,2024</span>
+            </li>
+
+            <li class="ea3-steps active">
+              <span class="dot"></span>
+              <span class="lower-text"> IB Assessment Data </span>
+              <span class="date-text">6 May,2024</span>
+            </li>
+
+            <li class="ea3-steps active">
+              <span class="dot"></span>
+              <span class="lower-text"> Provisioning & Fulfillment </span>
+              <span class="date-text">7 May,2024</span>
+            </li>
+            <li class="ea3-steps inprogress">
+              <span class="dot"></span>
+              <span class="lower-text"> Review </span>
+              <span class="date-text">Please Select</span>
+            </li>
+          </ul>
+        </div>
+        <!-- -------------- Stepper end ----------------- -->
+        <!-- -------------- content Start ----------------- -->
+        <div class="ea3-review-summary-container">
+          <div class="ea3-review-summary-header">
+            <h2>Review Summary</h2>
+          </div>
+          <div class="ea3-review-summary-body">
+            <div class="ea3-main-body-left">
+              <div class="ea3-body-left ea3-body-left-heght">
+                <div class="ea3-left-content2">
+                  <h3>Offer Structure</h3>
+                </div>
+                <div class="ow-accordion-content">
+                  <div class="ea3-accordion-header">
+                    <h4>Structure</h4>
+                  </div>
+                  <div class="accordion">
+                    <button class="accordion-button accordion-btn">
+                      <div class="ea3-plus-icon">
+                        <img src="./img/add-outline.svg" alt="" />
+                      </div>
+                      <div class="ea3-minus-icon">
+                        <img src="./img/minus-icon.svg" alt="" />
+                      </div>
+                      <img src="./img/gift-filled.svg" alt="" />
+                      <p>E3-SEC-ETD-ADV</p>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="accordion-button">
+                        <img src="./img/add-outline.svg" alt="" />
+                        <img src="./img/optionAccordion.svg" alt="" />
+                        <p>E3N-L-SEC-TA-E-L</p>
+                      </div>
+                      <div class="accordion-button">
+                        <img src="./img/add-outline.svg" alt="" />
+                        <img src="./img/optionAccordion.svg" alt="" />
+                        <p>E3N-L-SEC-TI-Ep></p>
+                      </div>
+
+                      <div class="accordion-button">
+                        <img src="./img/add-outline.svg" alt="" />
+                        <img src="./img/optionAccordion.svg" alt="" />
+                        <p>E3N-L-SEC-TA-E-S</p>
+                      </div>
+                      <div class="accordion-button">
+                        <img src="./img/add-outline.svg" alt="" />
+                        <img src="./img/optionAccordion.svg" alt="" />
+                        <p>SVS-E3S-CWCTA</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion">
+                    <button class="accordion-button accordion-btn">
+                      <div class="ea3-plus-icon">
+                        <img src="./img/add-outline.svg" alt="" />
+                      </div>
+                      <div class="ea3-minus-icon">
+                        <img src="./img/minus-icon.svg" alt="" />
+                      </div>
+                      <img src="./img/gift-filled.svg" alt="" />
+                      <p>E3-SEC-ETD-ADV</p>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="accordion-button">
+                        <img src="./img/add-outline.svg" alt="" />
+                        <img src="./img/optionAccordion.svg" alt="" />
+                        <p>Add-on Products (8 ATOs)</p>
+                      </div>
+                      <div class="accordion-button">
+                        <img src="./img/add-outline.svg" alt="" />
+                        <img src="./img/optionAccordion.svg" alt="" />
+                        <p>Add-on Products (8 ATOs)</p>
+                      </div>
+                      <div class="accordion-button">
+                        <img src="./img/add-outline.svg" alt="" />
+                        <img src="./img/optionAccordion.svg" alt="" />
+                        <p>Add-on Products (8 ATOs)</p>
+                      </div>
+                      <div class="accordion-button">
+                        <img src="./img/add-outline.svg" alt="" />
+                        <img src="./img/optionAccordion.svg" alt="" />
+                        <p>Add-on Products (8 ATOs)</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion">
+                    <button class="accordion-button accordion-btn">
+                      <div class="ea3-plus-icon">
+                        <img src="./img/add-outline.svg" alt="" />
+                      </div>
+                      <div class="ea3-minus-icon">
+                        <img src="./img/minus-icon.svg" alt="" />
+                      </div>
+                      <img src="./img/gift-filled.svg" alt="" />
+                      <p>E3-SEC-ETD-ADV</p>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="accordion-button">
+                        <img src="./img/add-outline.svg" alt="" />
+                        <img src="./img/optionAccordion.svg" alt="" />
+                        <p>Add-on Products (8 ATOs)</p>
+                      </div>
+                      <div class="accordion-button">
+                        <img src="./img/add-outline.svg" alt="" />
+                        <img src="./img/optionAccordion.svg" alt="" />
+                        <p>Add-on Products (8 ATOs)</p>
+                      </div>
+                      <div class="accordion-button">
+                        <img src="./img/add-outline.svg" alt="" />
+                        <img src="./img/optionAccordion.svg" alt="" />
+                        <p>Add-on Products (8 ATOs)</p>
+                      </div>
+                      <div class="accordion-button">
+                        <img src="./img/add-outline.svg" alt="" />
+                        <img src="./img/optionAccordion.svg" alt="" />
+                        <p>Add-on Products (8 ATOs)</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion">
+                    <button class="accordion-button accordion-btn">
+                      <div class="ea3-plus-icon">
+                        <img src="./img/add-outline.svg" alt="" />
+                      </div>
+                      <div class="ea3-minus-icon">
+                        <img src="./img/minus-icon.svg" alt="" />
+                      </div>
+                      <img src="./img/gift-filled.svg" alt="" />
+                      <p>E3-SEC-ETD-ADV</p>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="accordion-button">
+                        <img src="./img/add-outline.svg" alt="" />
+                        <img src="./img/optionAccordion.svg" alt="" />
+                        <p>Add-on Products (8 ATOs)</p>
+                      </div>
+                      <div class="accordion-button">
+                        <img src="./img/add-outline.svg" alt="" />
+                        <img src="./img/optionAccordion.svg" alt="" />
+                        <p>Add-on Products (8 ATOs)</p>
+                      </div>
+                      <div class="accordion-button">
+                        <img src="./img/add-outline.svg" alt="" />
+                        <img src="./img/optionAccordion.svg" alt="" />
+                        <p>Add-on Products (8 ATOs)</p>
+                      </div>
+                      <div class="accordion-button">
+                        <img src="./img/add-outline.svg" alt="" />
+                        <img src="./img/optionAccordion.svg" alt="" />
+                        <p>Add-on Products (8 ATOs)</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ea3-body-left">
+                <div class="ea3-left-content2">
+                  <h3>Replacement PID</h3>
+                </div>
+                <div class="ow-accordion-content">
+                  <table class="ea3-requestid">
+                    <thead class="ea3-table-header">
+                      <tr>
+                        <th>
+                          <div class="ea3-structure-column">Source ATO</div>
+                        </th>
+                        <th>Current Billing PID</th>
+                        <th>Replacement Billing PID</th>
+                        <th>Migration</th>
+                      </tr>
+                    </thead>
+                    <tbody class="ea3-table-body">
+                      <tr class="ea3-main-row ea3-toogle">
+                        <td class="ea3-bold-font">
+                          <div class="ea3-structure-column">E3-SEC-ETD-ADV</div>
+                        </td>
+                        <td>
+                          <div class="ea3-startdate-column">
+                            E2F-SEC-DUO-EES-F
+                          </div>
+                        </td>
+                        <td>
+                          <div class="ea3-enddate-column">
+                            E3N-ENTWAN-C-T4-A
+                          </div>
+                        </td>
+                        <td>
+                          <div class="ea3-startdate-column">Yes</div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="ea3-body-right">
+              <div class="ea3-right-content2">
+                <h3>All Documents</h3>
+              </div>
+              <div class="ea3-uploaded-documnent">
+                <label for="">Proposal Construct Setup</label>
+                <div class="ea3-document-card">
+                  <div class="ea3-left-content1">
+                    <img src="./img/documnet-icon.svg" alt="" />
+                    <div class="ea3-about-document">
+                      <label>EAMP_Delta_Upload...</label>
+                      <span>200 KB</span>
+                    </div>
+                  </div>
+                  <div class="ea3-document-action">
+                    <button>
+                      <img src="./img/download-icon.svg" alt="" />
+                    </button>
+                    <button><img src="./img/edit-icon.svg" alt="" /></button>
+                  </div>
+                </div>
+                <label for="">Commit Rules Setup</label>
+                <div class="ea3-document-card">
+                  <div class="ea3-left-content1">
+                    <img src="./img/documnet-icon.svg" alt="" />
+                    <div class="ea3-about-document">
+                      <label>EAMP_Delta_Upload...</label>
+                      <span>200 KB</span>
+                    </div>
+                  </div>
+                  <div class="ea3-document-action">
+                    <button>
+                      <img src="./img/download-icon.svg" alt="" />
+                    </button>
+                    <button><img src="./img/edit-icon.svg" alt="" /></button>
+                  </div>
+                </div>
+                <label for="">IB Assessment Data</label>
+                <div class="ea3-document-card">
+                  <div class="ea3-left-content1">
+                    <img src="./img/documnet-icon.svg" alt="" />
+                    <div class="ea3-about-document">
+                      <label>EAMP_Delta_Upload...</label>
+                      <span>200 KB</span>
+                    </div>
+                  </div>
+                  <div class="ea3-document-action">
+                    <button>
+                      <img src="./img/download-icon.svg" alt="" />
+                    </button>
+                    <button><img src="./img/edit-icon.svg" alt="" /></button>
+                  </div>
+                </div>
+                <label for="">Provisioning and fulfilment setup</label>
+                <div class="ea3-document-card">
+                  <div class="ea3-left-content1">
+                    <img src="./img/documnet-icon.svg" alt="" />
+                    <div class="ea3-about-document">
+                      <label>EAMP_Delta_Upload...</label>
+                      <span>200 KB</span>
+                    </div>
+                  </div>
+                  <div class="ea3-document-action">
+                    <button>
+                      <img src="./img/download-icon.svg" alt="" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- -------------- Content End ----------------- -->
+      <!-- -------------- Sidebar Start ----------------- -->
+      <div class="ea3-right-content">
+        <div class="ea3-sidebar">
+          <div class="ea3-progress-indicator">
+            <h3>Good start! Keep it moving and make it happen.</h3>
+            <div class="ea3-progress-bar">
+              <div role="donutbar" style="--value: 100; --fg: #74bf4b">
+                <span class="ea3-donutbar-value">100%</span>
+              </div>
+            </div>
+          </div>
+          <div class="ea3-sidebar-card">
+            <label>Discount Central Pricing</label>
+            <p>
+              Make sure you finish Discount Central & Pricing Factors Setup
+              before publishing Data.
+            </p>
+            <button class="ea3-primaryBtn">Make as Done</button>
+          </div>
+          <div class="ea3-divider"></div>
+          <div class="ea3-sidebar-card">
+            <label>EA Factors</label>
+            <p>Make sure you finish EA Factors Setup before publishing Data.</p>
+            <button class="ea3-primaryBtn">Make as Done</button>
+          </div>
+          <!-- <div class="ea3-divider2"></div>
+          <div class="ea3-sidebar-card">
+            <label>Checklist</label>
+            <div class="ea3-radio-list">
+              <ul>
+                <li>
+                  <img src="./img/sidebar-check.svg" alt="">
+                  <span>Offer Structure</span>
+                </li>
+                <li>
+                  <img src="./img/sidebar-check.svg" alt="">
+                  <span>Proposal Construct</span>
+                </li>
+                <li>
+                  <img src="./img/sidebar-check.svg" alt="">
+                  <span>Commit Rules Setup</span>
+                </li>
+                <li>
+                  <img src="./img/sidebar-check.svg" alt="">
+                  <span>IB Assessment Data</span>
+                </li>
+                <li>
+                  <img src="./img/sidebar-check.svg" alt="">
+                  <span>Provisioning & Fulfillment</span>
+                </li>
+              </ul>
+            </div>
+          </div> -->
+          <div class="ea3-publish-data-card">
+            <label>Publish Data to</label>
+            <div class="ea3-publish-list">
+              <img src="./img/close.svg" alt="" />
+              <div class="ea-3-list-title">
+                <p>EAMP</p>
+                <span>Not Selected yet</span>
+              </div>
+            </div>
+            <div class="ea3-divider3"></div>
+            <div class="ea3-publish-list">
+              <img src="./img/close.svg" alt="" />
+              <div class="ea-3-list-title">
+                <p>HANA</p>
+                <span>Not Selected yet</span>
+              </div>
+            </div>
+            <div class="ea3-divider3"></div>
+            <div class="ea3-publish-list">
+              <img src="./img/close.svg" alt="" />
+              <div class="ea-3-list-title">
+                <p>EAWS</p>
+                <span>Not Selected yet</span>
+                <div class="ea3-alert-box">
+                  <img src="./img/excelimation-blue-icon.svg" alt="" />
+                  <p>
+                    Before publishing to production, make sure you have made
+                    adjustment to EAWS.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- -------------- Sidebar End ----------------- -->
+    </div>
+    <!-- modal -->
+    <div id="requestModal" class="ea3-modal requestModal">
+      <div class="ea3-modal-content requestModalContent">
+        <div class="ea3-modal-header requestHeader">
+          Assign Owner
+          <button
+            class="ea3-closebtn closeIcon"
+            onclick="closeRequestModal()"
+          ></button>
+        </div>
+        <div class="ea3-modal-body requestBody">
+          <div class="requestInputBox">
+            <label for="ownerEmail">secondary owner</label>
+            <input
+              type="email"
+              id="ownerEmail"
+              name="ownerEmail"
+              placeholder="Enter secondary owner name"
+            />
+          </div>
+        </div>
+        <div class="ea3-modal-footer requestFooter">
+          <button class="ow-outlineBtn" onclick="closeRequestModal()">
+            Cancel
+          </button>
+          <button class="ow-primaryBtn" onclick="redirectToEnrollment()">
+            Done
+          </button>
+        </div>
+        <!-- href="../ea3-enrollment/ea3-enrollment.html" -->
+      </div>
+    </div>
+    <div
+      id="ow-overlay-container"
+      class="ow-overlay-container"
+      onclick="closeSidebar()"
+    ></div>
+    <div id="ow-overlay" class="ow-overlay"></div>
+
+  </body>
+  <script src="js/script.js"></script>
+  <script src="../modal.js"></script>
+</html>
