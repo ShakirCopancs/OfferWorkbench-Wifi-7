@@ -412,6 +412,7 @@ button {
   color: #606162;
 }
 .ea3-value {
+  margin-top: 8px;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;

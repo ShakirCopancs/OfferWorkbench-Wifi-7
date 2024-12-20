@@ -19,9 +19,10 @@ function closeSidebar() {
 // ------------------------select-field---------------------------
 document.addEventListener("DOMContentLoaded", () => {
   const selectContainer = document.querySelector(".ea3-select");
-  const mainInput = selectContainer.querySelector(".ea3-form-select");
+  const mainInput = selectContainer.querySelector(".ea3-form-input");
+  const mainInputs = selectContainer.querySelector(".ea3-form-select");
 
-  mainInput.addEventListener("click", () => {
+  mainInputs.addEventListener("click", () => {
     selectContainer.classList.add("active");
   });
 
@@ -112,6 +113,7 @@ class RuleManager {
             "disabled",
             selectedCard.classList.contains("selected")
           );
+          drawer.style.right = "-403px";
         }
       } else if (selectedId === "ea3-quantity-threshold") {
         if (
@@ -192,17 +194,24 @@ document
       const section = document.querySelector(
         ".ea3-quantity-calculator-section"
       );
-      if (this.id === "workloads") {
-        section.style.display = "block";
-      } else {
-        drawer.style.right = "-403px";
-        section.style.display = "none";
-      }
+      section.style.display = "block";
     });
   });
 
 // ------------------------------nodes--------------------------
 const dropdownButtons = document.querySelectorAll(".connect-btn");
+function autoScroll() {
+  const containerWidth = flowContainer.offsetWidth;
+  const contentWidth = flowContainer.scrollWidth;
+
+  if (contentWidth > containerWidth) {
+    flowContainer.scrollLeft += 300;
+  }
+
+  if (flowContainer.scrollLeft + containerWidth < contentWidth) {
+    requestAnimationFrame(autoScroll);
+  }
+}
 
 dropdownButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
@@ -214,7 +223,7 @@ dropdownButtons.forEach((button) => {
 
     dropdownContent.style.display =
       dropdownContent.style.display === "block" ? "none" : "block";
-
+    autoScroll();
     event.stopPropagation();
   });
 });
@@ -257,13 +266,12 @@ document
       const integerGroupDropdown = document.querySelector(
         ".integer-group .dropdown"
       );
- 
+      drawer.style.right = "922px";
+
       opSelectOption.classList.add("d-none");
       skuGroupList.classList.remove("d-none");
       multiplyConnectorDropdown.classList.add("d-none");
       multiplyConnectorList.classList.remove("d-none");
-      drawer.style.right = "922px";
-
       if (integerGroupDropdown) {
         integerGroupDropdown.classList.remove("d-none");
       }
@@ -299,7 +307,7 @@ document
       integerGroupDropdown.classList.add("d-none");
       integerGroupList.classList.add("d-none");
       selectValueIntegerGroup.classList.remove("d-none");
-
+      const flowContainerAuto = document.querySelector(".flow");
       console.log("Integer Group Button:", integerGroupButton); // Debugging line
 
       // Ensure the integer-group-button is visible by removing d-none
@@ -348,6 +356,7 @@ document
       if (dynamicConnector3) {
         dynamicConnector3.classList.remove("d-none");
       }
+      autoScroll();
 
       event.stopPropagation();
     });
@@ -375,6 +384,7 @@ document
       if (dynamicConnector4) {
         dynamicConnector4.classList.remove("d-none");
       }
+      autoScroll();
 
       event.stopPropagation();
     });
@@ -396,6 +406,8 @@ document
       dropdown4.classList.add("d-none");
       selectValue3.classList.add("d-none");
       dynamicConnector3List.classList.remove("d-none");
+
+      autoScroll();
 
       event.stopPropagation();
     });
@@ -445,3 +457,5 @@ function toggleDynamicNode() {
 }
 
 toggleDynamicNode();
+
+const flowContainer = document.querySelector(".flow");

@@ -82,7 +82,21 @@
   border: 1px solid #0070d2;
   cursor: pointer;
 }
-
+.ea3-outlineBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border: 1px solid #b0d8fb;
+  border-radius: 4px;
+  background-color: #f0f7fc;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  color: #0070d2;
+  /* cursor: pointer; */
+}
 .ow-overlay {
   position: fixed;
   top: 0;
@@ -189,11 +203,11 @@
   transition: 0.4s;
 }
 
-input:checked+.slider {
+input:checked + .slider {
   background-color: #2196f3;
 }
 
-input:checked+.slider:before {
+input:checked + .slider:before {
   transform: translateX(16px);
 }
 
@@ -240,7 +254,7 @@ input[type="checkbox"]:checked {
   cursor: pointer;
 }
 
-.ea3-form-input:focus+img+.ea3-form-select,
+.ea3-form-input:focus + img + .ea3-form-select,
 .ea3-form-select:has(.ea3-form-input:focus) {
   border-color: #606162;
 }
@@ -337,7 +351,7 @@ input[type="radio"] {
   position: relative;
 }
 
-input[type="radio"]:checked+.radio-label .radio-circle::after {
+input[type="radio"]:checked + .radio-label .radio-circle::after {
   content: "";
   width: 8px;
   height: 8px;
@@ -668,6 +682,7 @@ input:focus {
   padding-bottom: 15px;
   min-height: 250px;
   overflow-x: auto;
+  scroll-behavior: smooth;
 }
 
 .node {
@@ -686,17 +701,18 @@ input:focus {
 }
 
 .edit-icon img {
-  filter: invert(33%) sepia(87%) saturate(2490%) hue-rotate(173deg) brightness(100%) contrast(101%);
+  filter: invert(33%) sepia(87%) saturate(2490%) hue-rotate(173deg)
+    brightness(100%) contrast(101%);
   cursor: pointer;
 }
 
-.label {
+.flow .label {
   color: #666;
   font-size: 12px;
   margin-bottom: 2px;
 }
 
-.value {
+.flow .value {
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
