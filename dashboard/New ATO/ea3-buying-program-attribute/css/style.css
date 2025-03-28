@@ -14,7 +14,7 @@
     display: flex;
     padding: 0;
     margin: 0;
-    background-color: #e9ecef;
+    background-color: #e9ecef; 
     border-radius: 0.25rem;
   }
   .breadcrumb {
@@ -89,6 +89,7 @@
     color: #0070d2;
     background-color: #fff;
     border: 1px solid #0070d2;
+    cursor: pointer;
   }
   .ea3-outlineBtn:hover {
     color: #fff;
@@ -104,6 +105,7 @@
     color: #ffffff;
     background-color: #0070d2;
     border: 1px solid #0070d2;
+    cursor: pointer;
   }
   .ea3-secondaryDisableBtn {
     border-radius: 16px;
@@ -132,139 +134,44 @@ color: #1b1c1d;
 }
 
 
-.ea3-buyer-program-stepper {
+.ea3-buyer-program-form {
     padding: 16px;
     border-radius: 4px;
     border: 1px solid #D6D6D6;
     background: #ffffff;
-    max-width: 33%;
+    max-width: 50%;
     width: 100%;
 }
 .buyer-program-heading {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 16px;
 }
-.buyer-program-heading .heading {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.buyer-program-heading h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
 }
-.ea3-buyer-program-stepper .ea3-inprogress {
-  background: #ffe6bd;
-}
-.ea3-buyer-program-stepper .ea3-batch {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-  color: #1b1c1d;
-  padding: 3px 6px;
-  border-radius: 4px;
-}
-.buyer-program-title span {
-  color: #1b1c1d;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  display: block;
-  margin: 8px 0;
-}
-.ea3-progress-stepper {
-  position: relative;
-}
-.ea3-buyer-program-progreessBar {
-  margin-top: 24px;
-}
-.ea3-progress-stepper::after {
-  position: absolute;
-  content: "";
-  width: 8px;
-  height: 8px;
-  background: #0070d2;
-  border-radius: 20px;
-  right: 0;
-  top: 0;
-}
-.ea3-progress-stepper::before {
-  position: absolute;
-  content: "";
-  width: 8px;
-  height: 8px;
-  background: #0070d2;
-  border-radius: 20px;
-  left: 0;
-  top: 0;
-}
-.ea3-progress-stepper .ea3-progress-line {
-  width: 100%;
-  height: 2px;
-  background: #0070d2;
-  position: absolute;
-  top: 3px;
-}
-.ea3-progress-stepper .progressBar p {
-  font-size: 12px;
-    line-height: 16px;
-    letter-spacing: 0.2px;
-    font-weight: 700;
-    color: #1b1c1d;
-}
-.ea3-progress-stepper .progressBar .progress-count {
-  font-weight: 500;
-}
-.progressBar {
-  padding: 6px 12px;
-  height: 30px;
-  z-index: 1;
-  position: absolute;
-  left: 53px;
-  top: -10px;
-  border-radius: 100px;
-  background: #ebebeb;
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-.ea3-progress-stepper-counts-list {
-  display: flex;align-items: center;justify-content: space-between;padding-top: 20px;
-}
-.ea3-progress-stepper-counts-list .ea3-progress-stepper-counts p {
-  font-size: 16px;
-font-weight: 700;
-line-height: 24px;
-color: #1b1c1d;
-}
-.ea3-progress-stepper-counts-list .ea3-progress-stepper-counts span {
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 16px; 
-  letter-spacing: 0.2px;
-color: #1b1c1d;
-}
- .buyer-program-stepper-linking {
-    font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: 20px; 
-color: #0070d2;
-display: flex;
-align-items: center;
-gap: 8px;
- }
+
 
  .ea3-empty-state {
     text-align: center;
     width: 100%;
-    max-width: 33%;
+    max-width: 50%;
     padding: 16px;
     border-radius: 4px;
     border: 1px solid #D6D6D6;
     background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
    
     .ea3-empty-state h4 {
     font-weight: 700;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 24px;
     margin-top: 16px;
     color: #1b1c1d;
@@ -279,16 +186,9 @@ gap: 8px;
    }
    .ea3-buying-programing-attribute-content {
     display: flex;
-    gap: 12px;
+    gap: 24px;
 }
-.ea3-transparentBtn {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
+
 .ea3-validate-proposal {
     font-weight: 500;
     font-size: 14px;
@@ -307,72 +207,89 @@ gap: 8px;
     padding-right: 8px;
     display: flex;
 }
-.buyingEditModalHeading {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #ebebeb;
-    padding-bottom: 12px;
-}
-.editModal {
-    max-width: 800px;
-    width: 100% !important;
-}
-
-.ea3-editModalForm {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    padding: 16px 0;
-}
-
-.grid-item {
-    background-color: #f1f1f1;
-    padding: 20px;
-    text-align: center;
-    border: 1px solid #ddd;
-}
 
 
-
-.ea3-inputfield-label {
-    display: block;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    color: #606162;
-    margin-bottom: 4px;
+.ea3-btn-link{
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; 
+color: #0070d2;
+display: flex;
+align-items: center;
+gap: 8px;
+border: none;
+background-color: transparent;
+cursor: pointer;
 }
 
-.ea3-inputfield-input {
-    box-sizing: border-box;
-    border-radius: 4px;
-    border: 1px solid #D6D6D6;
-    background: #fff;
-    width: 100%;
-    padding: 10px 16px;
-    position: relative;
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
 }
-.ea3-inputfield-input::placeholder {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    color: #1b1c1d;
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 }
-.ea3-inputfield-input:focus-visible {
-    outline: none;
+
+.form-field {
+  display: flex;
+  flex-direction: column;
 }
-.ea3-modal-header-title{
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    color: #606162;
-    margin-top: 8px;
+
+.form-field label {
+  color: #606162;
+  font-size: 14px;
+  margin-bottom: 6px;
 }
-.resetBtn {
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20px;
-    color: #0070d2;
+
+.form-input,.form-select {
+  border: 1px solid #D6D6D6;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 14px;
+  color: #1B1C1D;
+
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23606162' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 22px;
+}
+
+.form-row {
+  margin-bottom: 16px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  gap: 16px;
+}
+
+
+
+
+
+
+/* ----------------------icons-style-------------------------------- */
+
+.icon-reset 
+ {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-width: 16px;
+  height: 16px;
+  border: none;
+  cursor: pointer;
+}
+.icon-reset {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 .283v1.699a7 7 0 1 1-7 7c0-2.062.896-3.909 2.313-5.19l1.122.79a5.656 5.656 0 0 0-2.102 4.4A5.673 5.673 0 0 0 8 14.649a5.673 5.673 0 0 0 5.667-5.667A5.673 5.673 0 0 0 8 3.315v1.698c0 .248-.165.334-.366.191L4 2.645 7.634.092C7.835-.05 8 .035 8 .283Zm1 8.74a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" fill="%230070D2"/></svg>');
 }
