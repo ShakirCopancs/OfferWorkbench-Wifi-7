@@ -26,3 +26,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const value = getComputedStyle(donutBar).getPropertyValue("--value").trim();
   donutBar.querySelector(".donutbar-value").textContent = value + "%";
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggles = document.querySelectorAll(".ea3-stepper-toggle");
+
+  toggles.forEach(function (toggle) {
+    toggle.addEventListener("click", function () {
+      const stepList = toggle.previousElementSibling;
+
+      if (toggle.classList.contains("toggleDown")) {
+        // Show the step list
+        stepList.style.display = "block";
+        toggle.classList.remove("toggleDown");
+      } else {
+        // Hide the step list
+        stepList.style.display = "none";
+        toggle.classList.add("toggleDown");
+      }
+    });
+  });
+});
